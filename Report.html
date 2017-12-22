@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.packtpub.com/books/content/ireport-netbeans -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>iReport in NetBeans | PACKT Books</title>
+		<iframe height="0" width="0" src="./Report_files/activityi.html" style="display: none; visibility: hidden;"></iframe><script type="text/javascript" async="" src="./Report_files/runtime.2.2.4.js"></script><script async="" src="./Report_files/fbevents.js"></script><script type="text/javascript" async="" src="./Report_files/analytics.js"></script><script type="text/javascript" async="" src="./Report_files/ec.js"></script><script async="" src="./Report_files/script.js"></script><script async="" src="./Report_files/gtm.js"></script><script async="" src="./Report_files/analytics.js"></script><script>
+			dataLayer = [];
+		</script>
+		<iframe src="javascript:false" title="" style="width: 0px !important; height: 0px !important; border: 0px !important; overflow: hidden !important; position: absolute !important; top: -1000px !important; left: -1000px !important;"></iframe><script type="text/javascript">
+			var GRANIFY_SITE_ID = 1318;(function(e,t,n){var r,i,s,o,u;u=false;try{o=new RegExp("(?:^|\\W)_gr_test_url=([^;]*)");s=document.cookie.match(o);if(s){if(s[1]==="1")u=true}else{r=Math.random();if(r>.95)u=true;i=new Date(+(new Date)+1e3*60*60*24*2);document.cookie="_gr_test_url="+ +u+";expires="+i.toGMTString()+";path=/"}}catch(a){}if(u)e.replace("javascript.js","javascript.next.js");try{o=new RegExp("(?:^|\\W)_gr_ep=([^;]*)");s=document.cookie.match(o);if(!s){document.cookie="_gr_ep_sent=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/";document.cookie="_gr_er_sent=;expires=Thu, 01-Jan-1970 00:00:01 GMT;path=/";if(!window.location.origin){if(window.location.port)port=":"+window.location.port;else port="";window.location.origin=window.location.protocol+"//"+window.location.hostname+port}path=window.location.toString().replace(window.location.origin,"");referrer=document.referrer;i=new Date(+(new Date)+1e3*60*30);document.cookie="_gr_ep="+path+";expires="+i.toGMTString()+";path=/";document.cookie="_gr_er="+referrer+";expires="+i.toGMTString()+";path=/"}}catch(a){}a=new Date;a=""+a.getUTCFullYear()+(a.getUTCMonth()+1)+a.getUTCDate();e=e+"?id="+t+"&v="+a;window.Granify=n;n._stack=[];n.init=function(e,t,r){function i(e,t){e[t]=function(){Granify._stack.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var s=n;h=["on","identify","addTag","trackPageView","trackCart","trackOrder"];for(a=0;a<h.length;a++)i(s,h[a])};n.init();var f,l,c,p=document.createElement("iframe");p.src="javascript:false";p.title="";p.role="presentation";(p.frameElement||p).style.cssText="width: 0 !important; height: 0 !important; border: 0 !important; overflow: hidden !important; position: absolute !important; top: -1000px !important; left: -1000px !important;";c=document.getElementsByTagName("script");c=c[c.length-1];c.parentNode.insertBefore(p,c);try{l=p.contentWindow.document}catch(a){f=document.domain;p.src="javascript:var d=document.open();d.domain='"+f+"';void(0);";l=p.contentWindow.document}l.open()._l=function(){var t=this.createElement("script");if(f)this.domain=f;t.id="js-iframe-async";t.src=e;this.body.appendChild(t)};l.write('<body onload="document._l();">');l.close()})("//cdn.granify.com/assets/javascript.js",GRANIFY_SITE_ID,[])
+		</script>
+				<script type="text/javascript">
+			Granify.trackPageView({
+			  page_type: "blog"
+			});
+		</script>
+		
+<link rel="shortcut icon" href="https://d1ldz4te4covpm.cloudfront.net/misc/favicon.ico" type="image/x-icon">
+<meta name="description" content="iReport in NetBeans written by Shamsuddin Ahammad: one of the many articles from Packt Publishing">
+<meta name="revisit-after" content="1 day">
+		<link rel="canonical" href="https://www.packtpub.com/books/content/www.packtpub.com/books/content/ireport-netbeans">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta id="viewport" name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">-->
+		 <link href="./Report_files/ubuntu.css" rel="stylesheet" type="text/css">
+		<!--[if lt IE 10]>
+			<link href="/sites/all/themes/packt_v4/css/core/packtpub_ie.css" rel="stylesheet" type="text/css">
+			<![endif]-->
+			<link type="text/css" rel="stylesheet" media="all" href="./Report_files/78f9098398df991675d32855ba33c2b5.css">
+<link type="text/css" rel="stylesheet" media="print" href="./Report_files/6e295a6eb8f64cef4e07d9b1f02d46e8.css">
+  
+			<script type="text/javascript" src="./Report_files/a3788c8c64fd65c470e23e7534c3ebc8.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "\u002F", "dhtmlMenu": [ "doubleclick", "clone" ] });
+//--><!]]>
+</script>
+			<script type="text/javascript">
+				var Packt = Packt || {}; Packt.user = {"cart":[],"newsletters":[],"country_code":"IN","selected_currency":"INR","currency":"INR","currency_symbol":"\u20a8","uid":0};
+			</script>
+			<link rel="alternate" type="application/rss+xml" href="https://www.packtpub.com/rss.xml" title="Packt Publishing News">
+			<script>
+				(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+				ga("create", "UA-284627-1", "packtpub.com", {"siteSpeedSampleRate": 100});
+				ga("require", "displayfeatures");
+				ga('require', 'ec');
+				ga("send", "pageview");
+								//ga("require", "ecommerce", "ecommerce.js");
+
+				
+			</script>
+	<script type="text/javascript" async="" src="./Report_files/embed.js"></script><script src="./Report_files/j.php" type="text/javascript"></script><style type="text/css">@font-face{font-family:gsc;src:url(//gscst-84a.kxcdn.com/main/widgets/201602/e76fe1770c18981b2cbb8add0ad13f52/common/fonts/gsc.eot?) format('embedded-opentype');font-weight:400;font-style:normal}@font-face{font-family:gsc;src:url(data:application/octet-stream;base64,AAEAAAALAIAAAwAwR1NVQrD+s+0AAAE4AAAAQk9TLzIAAAuDAAABfAAAAFZjbWFwLJwKTgAAAlwAAANwZ2x5ZlprDkIAAAYUAAAVNGhlYWQIFT4DAAAA4AAAADZoaGVhCDcD+wAAALwAAAAkaG10eITU/+8AAAHUAAAAiGxvY2Fo8mPcAAAFzAAAAEZtYXhwATIAlwAAARgAAAAgbmFtZcPA/OkAABtIAAACo3Bvc3Rmqol9AAAd7AAAAccAAQAAA+gAAABaA+j/+//wA/gAAQAAAAAAAAAAAAAAAAAAACIAAQAAAAEAAB6HYe9fDzz1AAsD6AAAAADSgfyaAAAAANKB/Jr/+wAAA/gD6gAAAAgAAgAAAAAAAAABAAAAIgCLAAYAAAAAAAIAAAAKAAoAAAD/AAAAAAAAAAEAAAAKAB4ALAABREZMVAAIAAQAAAAAAAAAAQAAAAFsaWdhAAgAAAABAAAAAQAEAAQAAAABAAgAAQAGAAAAAQAAAAAAAQPoAZAABQAAAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA6ADoQAPoAAAAWgPqAAAAAAABAAAAAAAAA+gAAAPoAAAD6P/+A+gAAAPoAAAD6AAAA+gAAAPoAAAD6P//A+j//APoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPo//sD6P/7A+gAAAAAAAUAAAADAAAALAAAAAQAAAHUAAEAAAAAAM4AAwABAAAALAADAAoAAAHUAAQAogAAABQAEAADAAToDOgT6BXoGegc6CToJugs6ED//wAA6ADoEegV6BnoG+gf6CboKOhA//8AAAAAAAAAAAAAAAAAAAAAAAAAAQAUACwAMAAwADAAMgA8ADwARAAAAAEAAgADAAQABQAGAAcACAAJAAoACwAMAA0ADgAPABAAEQASABMAFAAVABYAFwAYABkAGgAbABwAHQAeAB8AIAAhAAABBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAGcAAAAAAAAACEAAOgAAADoAAAAAAEAAOgBAADoAQAAAAIAAOgCAADoAgAAAAMAAOgDAADoAwAAAAQAAOgEAADoBAAAAAUAAOgFAADoBQAAAAYAAOgGAADoBgAAAAcAAOgHAADoBwAAAAgAAOgIAADoCAAAAAkAAOgJAADoCQAAAAoAAOgKAADoCgAAAAsAAOgLAADoCwAAAAwAAOgMAADoDAAAAA0AAOgRAADoEQAAAA4AAOgSAADoEgAAAA8AAOgTAADoEwAAABAAAOgVAADoFQAAABEAAOgZAADoGQAAABIAAOgbAADoGwAAABMAAOgcAADoHAAAABQAAOgfAADoHwAAABUAAOggAADoIAAAABYAAOghAADoIQAAABcAAOgiAADoIgAAABgAAOgjAADoIwAAABkAAOgkAADoJAAAABoAAOgmAADoJgAAABsAAOgoAADoKAAAABwAAOgpAADoKQAAAB0AAOgqAADoKgAAAB4AAOgrAADoKwAAAB8AAOgsAADoLAAAACAAAOhAAADoQAAAACEAAAAAALQBKAFMAbQB/gI6ApQDZAOoA/gENgScBVYFvgX+BoQHDgeaB6wHxgfYCAIIgAimCM4I8AkGCYwJngmwChAKWAqaAAAAAwAAAAADpgOpABYALAB0AAABIgcGBwYVFBcHNxYzFjc2Nz4BJyYnJgMiJwc3JjU0NzY3NjIXFhcWFAcGBwYTJi8BJgYHDgEHBicmJyYnJicmNzY/ATY/ATY0LgEnLgIHIjMnIgcGBw4BFxYXJhcWFxYXFhcWFxYXFhcWPwE2Nz4CLgEnAfx0Y2E4Oj1M615vdGNhODoBOjhhY3RqWYcsRTAwUFPAU1AwMDEvUFNoBh4jCAsFAx4CCA8uJxUSCwgDAgEFEAMDBgMFFgYDBgYDCAMWEQ0RBxECEgwLBA4MDBITGBkeHicZFQ4JCA0RGBsOBAQGBgOpOjhgY3R3ZeVLMwE6OGFj52RgODr89Dorg110YFNQLzEwMFBTwFNQMDABAgMQEwQCBwUgBAkHEyYTGxEPCAYDBhMDBQgFCgg8EQgJAwEBDRELG0YoGQ0FFRERFxQYExcNEQgIAQIBAgEOECIfCAUDAAAAAv/+AAAD6AO/ACQAUAAAATIXFhcWFRQHBgcGDwEVFBcmJyYvAQcGKwEiJicuATU0NzY3NjciBwYHBhUGFx4BOwEyNxYXFhcWFzAxMzI2NTQnMSYnJj0BNjc2NCcmJyYjAfF4Z2M7PBASIic4Ih8wMi0KFiITHBxqtDooKTs5YmZ2iXNxQUMBQT/iihkiFg4rMzFALQYLEQMbDRphNDBFQnJ1iQOBKypGSVUyMjgtMh4TKDM+GCMfDR0HA0E8Kmk7VUlHKSs+MzFUWGdzW1hjAxAfJhsiBxAMBgYtHTgkAy9gV89YVDEzAAEAAAAAAtoDxgAWAAAlESM1MzU0NzY7ARUjIgYHBh0BMwcjEQF0ZmYxNnaIVR8dBQOaEogiAbaqZm02O6sPDwwaVar+SgAAAAMAAAAAA+gD6AAUACkARQAAASIHBgcGEBcWFxYgNzY3NhAnJicmAyInJicmNDc2NzYyFxYXFhQHBgcGEyM1NCYiBh0BIyIGFBY7ARUUFjI2PQEzMjY0JgH0h3VxQkVFQnF1AQ51cUJFRUJxdYd3ZWM6PDw6Y2btZmM6PDw6Y2ZkvBEcEbwOEREOvBEcEbwOERED6EVCcXX+8nVxQkVFQnF1AQ51cUJF/Fc8OmNl7mZjOjw8OmNm7WZjOjwB1LwOEREOvBEcEbwOEREOvBEcEQACAAAAAAPmAywAJQAxAAABFTMGBwYjIi4BND4BMzIXNy4BIyYHBgcGFBcWFxYyNzY3NjU0JwU1IxUjFTMVMzUzNQE0sRUtMDoyVDExVDJDNFwqbTxWSEcqKioqR0mqSUcpKwcBD09sbE9sAjaCNCEiMVRkVDEsWicrASopR0irSUcpKyoqR0lVHCYLbGxPbGxPAAAAAQAAAAAC+gOVACYAAAEVMxUjFRQXHgIXFjMyNxUGBwYjIicmJyYnLgE1ESM1Njc2NzY3AhjBwQEBBxIKGiVBPS8yKTUbFREZKiEgF3FBHSIWFQkDlcGV1isPFhQUBhAphBcMCgQDBw8aHDs6ASR3FBkdKyZEAAAAAQAAAAADngNaADsAAAEGBz4BNwYHLgEjIg4BFRQXJicmJwYVFBYXJicVFB4BFwYjIiceARcGBwYjIiceATMyNzY3Njc2PQE2NwOeMTMbJwoyPRhCJTBQLwVsX1xCFyokKiYlQCgaFA0UEVk5LjY5PBUVO4hJdGFZQz4hITQjAwUWBhEzICAMGx4xUzETFgYyMVQpMi5QGAEVAitLMwgHBDdGASUTFQMoKi8rTkhdWlsYJjcAAf//AAAD9AMRAIoAACUzNz4BPwI2NzY3NhcWFx4BFxYXFhcWMz8CNjc2NzYnMCYnJicmLwEuAj4BPwE2JyYnJiMPASMiBg8CBgcGJy4BJyY1NzQ3NicuAicmIyIHBgcOARcWFx4BFxYfARQHBgcGJyYnJicmLwImJyYvAQ8BBgcGHwIWFxYXFhcWFxYXFhcWFwHqPAoLCwIBAQIHChEKDQsOCCUKEQ0REQ0LCYUKDQgMAgMLDQgNERUcGwwNBgQMCztcDgMNCQ4MlgcICwQEDxQUSx4JCAEBAQIBAQEQIgoQHDQVIxENDwYLCg8QBAIBAgMGDBAXGisPDgsIBwMFBAYJCJAMDAYEAgITGRwmJi8sICYgIxwdFBPZAgMMCwoVGREYBQMHBg8JKgsQCQwFBAECAgIFBwsOExQLERIXGhkMERARFQ9NeCEJBAMBAgYHByYtIYEPBhcPDBIcGS4kDhUWCAECAgIJBxQCAQQGFBIMEC8oGyUHCRgaShcdFBURBwcDBAQCAgEDBgUKCis1M0g5SC0iGBQOCgYEAQAAAAAC//wAAAP4A2EAJAAnAAABDgEHBgciBiMiJyYnIiYnLgEnJjc+ATc2NzYzJAUyFhceARcWLQERA9oFFw8fPizSPHtCbV8bLBYPFwUKCgUXDxgUFxoBZQFlGywWDxcFFv6o/vEBHhwyDx8MBwEBBRUWDzIc1tYcMg8SCAoVFRUWDzIc1geP/uIAAgAAAAADhgOGACkAMwAAASYjIgcGBwYUFxYXFjI3Njc2NTQnNxYVFAcGBwYiJyYnJjQ3Njc2MzIXExQHDgEiJicmNQKGR0tbTkstLS0tS062TkwsLisxPTc1W17aXls1Nzc1W15taVtMJSR9lH0kJQMhIi4sTE62TkstLS0tS05bVkwxYnFtXls1Nzc1W17aXls1NzT+o0pAPklJPkBKAAMAAAAAA7QDSwAQAB8AIgAAARYVERQGIyEiJjURNDYzITIBFjMhMjY1EQEGIicBERQTCQEDpBAgF/zvGCAfGQMRGPzmCAwCyAwQ/qIPJg/+pC0BUgFSAzkTGv3OGiUlGgIyGiX9mQgQEAHl/sYNDQE7/hoQAiD+0QEvAAADAAAAAAPcA9wAEwAoAD0AAAEmBgcDJyYiBhQfARYyPwITNiYDIgcGBwYQFxYXFiA3Njc2ECcmJyYDIicmJyY0NzY3NjIXFhcWFAcGBwYCuwwbB7dsChsUCooKHAoFAssHB9OEcm5BQkJBbnIBCHJvQENDQW5yhH9taT5AQD5pbf5taT5AQD5pbQLBBwgL/sxoChQaCocKCgcCAVcLGwEiQ0Bvcv74cm5BQkJBbnIBCHJuQUP8RUA+aW3+bWk+QEA+aW3+bWk+QAAAAAADAAAAAAPoA78AJwBGAIEAAAEyNjc2JzQnJicmIgcGBwYUFxYXFRQHBg8BFBY7ATAxNjc2NzY3FjMnBwYHBgc2NzY/AScmJyY0Nz4BMhceARUUDgErASYnJTQnJicGBxYXFhUUBg8BFxYXJicmLwEHBgcjIiYnMyMWFxY7ATI3FhcWFxYXMDEzMjY0JzEmJyY9ATYBoHC2MzUBNzVbXt9fXTY3KCtMFA0UAw0JBiUzKSkiDBMZRSkIGRsYCgUFAQQiPiEeLy6fvE9NW1eZXhIWFAKEGx08BAsnDw8yNh8CBAQcFQ8LByIIFBNAYScBXDFITV0TFg8MGB8fKB8GCQoDCwsMiQFSUEdKXVNHRCgpKShER6ZITicDHywcHwkKDAUcFh4aDgNBIgkTFw8cFQ8KLRMeQDmCODdAICBvQkp2QwECA0EwMSMcKRsfHSw0SRwQKy0MFBUPDwsHAgEeITohIgMOFRwSGAULDgQRKCodA0oAAAAEAAAAAAOHA4cAFAAkADoARwAAEyEyHgEVERQOASMhIi4BNRE0PgEzBSIGHQEUFjsBMjY9ATQmIxcjFhUUDgEiLgE1NDcjERQWMyEyNjUBIg4BFB4BMj4BNC4ByQJXHC8cHC8c/akcMBwcMBwB4w8VFQ9bDxYWDyVHCkNziHRDC0oTDQIxDRP+ySxLKytLWEosLEoDhxwvHP2pHDAcHDAcAlccLxxaFQ9XDxUVD1cPFfsfJkJwQUFwQiIj/qwNExMNAbUqSVRJKipIVkgqAAAAAwAAAAADTAN3AAMADgAqAAAlIxEzJzEjIiY0NjIeAQYBIzU0JyYjIgcGBwYdASM3NCczFTY3NjMyFxYVATiTk0kBJS0uSywBLgI4lBETJhwVEgkFkwEBkxQZJDRMLTHmAbs9LEEsK0Is/gjtLxobEQ4WDBj4ztMaPyARGTE1YgABAAAAAANTA7MAUgAAASYnJicmJwYHBgcmNzY3Njc2Ny4BNjc2FxYXFgcGBwYHBgcGFxYXFhcWNzY3NicmJyYnJgYHBhcWHwEWFxYHBgcmJyY2NzY3Njc2FhcWFxYGBwYCLRgVDxUeBxUXIjgJBAQOBxUSCBIBIR0fJhcKCQIBCQMOCwUGAQINDx08MCoVEwgKJjdPSIslKA0CCA4IAwUDAwxFHhsGLClEQ0pdpjU5DA4+QkgBLgIJBw0VBHA7VSlAQTc/IkxGJx9WTBATDwkUERoVHw4rJBQeFBgPEAYMLihLR0dKJzgGB0pARlAODxgOCw4PEhUQNzGjRT8pKAkKMzg8VGO8NjsAAAAABAAAAAAD6APoADMAQABNAFoAAAEiBgclNjU0JyUeATI+ATU0LgEiDgEVFBcFLgEjDgIUHgEzMjY3BQYVFB4BMj4BNTYuAQMyHgEUDgEiLgI+AQEiLgE0PgEyHgIOAQEiLgE0PgEyHgEUDgEDOStMGf6vCQwBURhNXlAvL1BgUC8G/qkYSSkwUC8vUDArSRkBTgYvUGBQLwMsUDAfNB4eND4zHgIdNP2XHzMeHjM+NB4BHTUCah8zHh4zPjQeHjQBYSkiqRgdIxijJCovUDAzUjAvUDAPIKUeIwExUGBQLyYirCAPMFAvL1AwMFAvAkkeND4zHh4zPjQe/doeMz40Hh40PjMe/rseMz40Hh40PjMeAAAABQAAAAAD6AOyABcAQgBGAFcAXQAAJSInJjY3PgE0JicuAT4BFx4CFA4BBwYTNCYnNTQnJgYHBSEmDgEdARQeATsBFRQWOwEyNj0BMwUWMzI3Nj0BNjc2ASM1MwUlLgEjISImPQE0NjMhMjclEzUeARQGAxQXBgQLDEdZV0kMCwkYDDtbMjJbOwMsPDIPCBEH/sX+9h0vGxwuGikkGj8aJCkBOw4FCgYPLx0f/b4/PwGT/u0CCgT+7RAVFA4BEwUOARM+FRoZyxYMGAUagJp+HAUYGAsEFlh2fnRZFwMBKThXEP4QDAUBB/oBFikX0RYlFn0aJSUaefoGAwwQ/hYrLf78eaLeAgQMCtEICwbe/kS2DzA3LwAAAAEAAAAAAvsCkgAFAAAJATcXNxcB9P75NNPTNAFXAQY109I0AAEAAAAAAwwDCgALAAABBycHJzcnNxc3FwcDDDPl5TPl4DTf4DPfARI05eU05d804OA03wABAAAAAAL7ApEABQAAAQcnBycBAvs009M0AQcBizTS0jQBBgABAAAAAAPrA+oAFAAAASYGBwElJiIGFBcBFjI3Nj8BATYmA7wdQhD+Rf79GEQwGAFPGEMYCAQFAewREgPZERIc/Rj9Fy5CF/66FxcICAYDPB0/AAAGAAAAAAOHA4cAIwAvADkAQwBPAFsAAAEjFRQGIyEiJj0BIyImPQE0NjsBNTQ2MyEyFh0BMzIWHQEUBgEjIgYUFjsBMjY0JiU0JiMhIgYdASERIRUUFjMhMjY1JyMiJjQ2OwEyFhQGBzMyFhQGKwEiJjQ2Az5KKh/+kh4rSR8rKx9JKx4Bbh8qSR8rK/2YJQ8WFg8lDxUVAagVEP7cEBUBbv6SFRABJQ8VW9wHCwsH3AcLCuSSCAsLCJIHCwsBGG4eKysebisf2x8quB4rKx63Kx/bHysBJRUeFhUgFNwPFhYPk/8Atw8WFg9uCw8LCw8LJQoQCgsPCgAAAAABAAAAAAMgAyAAFAAAATIXFhcWFAcGBwYiJyYnJjQ3Njc2AfRSRkMoKSkoQ0akRkMoKSkoQ0YDICkoQ0akRkMoKSkoQ0akRkMoKQAAAQAAAAAD6APoABQAAAEyFxYXFhAHBgcGICcmJyYQNzY3NgH0iHRxQ0REQ3F0/vB0cUNERENxdAPoRENxdP7wdHFDRERDcXQBEHRxQ0QAAAABAAAAAAPoA+gAEwAAEyEyHgEVERQOASMhIi4BNRE0PgGGAt0kPSQkPST9IyQ+JCQ+A+gkPST9IyQ+JCQ+JALdJD0kAAEAAAAAA3EDUwAGAAAJAS8BNxcBA3H+PWfQlI0BKQLE/dFgvq2AAXMAAAAABAAAAAAD6APoABQAKQAtAFcAAAEiBwYHBhAXFhcWIDc2NzYQJyYnJgMiJyYnJjQ3Njc2MhcWFxYUBwYHBiczNSMTIgcGBwYdATM0Njc2MzIeAhUUBwYHBjcGBwYVMzQ3Njc2NzY1NCcuAQH0h3VxQkVFQnF1AQ51cUJFRUJxdYd3ZWM6PDw6Y2btZmM6PDw6Y2amTk4vRykVDAtIDgsVJhUeFwoPBg8yEiQLCkgDBhMxFxwoFzoD6EVCcXX+8nVxQkVFQnF1AQ51cUJF/Fc8OmNl7mZjOjw8OmNm7WZjOjycTgHkJRIiHyEDFCsJFgoYHRYbIAoSQBcfGRszKQkNGDEkKTFHJBUTAAAAAAEAAAAAApIC+wAFAAABFwcXBwECXTXT0jT++gL7NNPTNAEHAAEAAAAAApIC+wAFAAAlJzcnNwEBizTS0jQBB+0009M0/vkAAAL/+wAAA/AD1wAnADcAAAEuASclJy4BIgYPAQUOAhYfAQMGFhcWMzI/ARcWMzI2Nz4BJwM3NgUHFxMlDwETLwElPwEfAQUD5QgeE/78cQsiKiQLcf78Ex4PCQ++KwMPEhIWEBHj4hERCxYHEQ8CLL4j/v4hBiz+9SjmMiG7ATMUcXEUATMCbxMaAijpExUWEukoAhomJg2+/vYVJQwOCnx8CgcHDCUVAQe+GqMhK/74kBh7ATMhvi8o7OwoLwAAAAH/+wAAA+oD1wApAAABLgEnJScuASIGDwEFDgEHBhYfAQMGFhcWMzI/ARcWMzI2Nz4BJwM3PgED5QgeE/78cQsiKiQLcf78FCAFBwkPvisDDxISFhAR4+IREQsWBxEPAiy+EQwCbxMaAijpExUWEukoAhsSEyYNvv72FSUMDgp8fAoHBwwlFQEHvg4nAAAAAAMAAAAAA+gD6gAjACcAKgAAATQ9ATQmNDAxJzgBMSYHMDEBDgEVFBcFEx4BMzAxMjcBMDE2BwEHJQEDAQPoAwYRD/xRBwkQAUWiBA4HFAUBvAOp/jIK/v0BrIMB2wPJAwMDAQcCBggF/kcCDwgSCqL+uwcJEAOvBFv+MQmD/k4BAwHbAAAAEgDeAAEAAAAAAAAAOwAAAAEAAAAAAAEAAwA7AAEAAAAAAAIABwA+AAEAAAAAAAMAAwBFAAEAAAAAAAQAAwBIAAEAAAAAAAUACwBLAAEAAAAAAAYAAwBWAAEAAAAAAAoAKwBZAAEAAAAAAAsAEwCEAAMAAQQJAAAAdgCXAAMAAQQJAAEABgENAAMAAQQJAAIADgETAAMAAQQJAAMABgEhAAMAAQQJAAQABgEnAAMAAQQJAAUAFgEtAAMAAQQJAAYABgFDAAMAAQQJAAoAVgFJAAMAAQQJAAsAJgGfQ29weXJpZ2h0IChDKSAyMDE1IGJ5IG9yaWdpbmFsIGF1dGhvcnMgQCBnZXRzaXRlY29udHJvbC5jb21nc2NSZWd1bGFyZ3NjZ3NjVmVyc2lvbiAxLjBnc2NHZW5lcmF0ZWQgYnkgc3ZnMnR0ZiBmcm9tIEZvbnRlbGxvIHByb2plY3QuaHR0cDovL2ZvbnRlbGxvLmNvbQBDAG8AcAB5AHIAaQBnAGgAdAAgACgAQwApACAAMgAwADEANQAgAGIAeQAgAG8AcgBpAGcAaQBuAGEAbAAgAGEAdQB0AGgAbwByAHMAIABAACAAZwBlAHQAcwBpAHQAZQBjAG8AbgB0AHIAbwBsAC4AYwBvAG0AZwBzAGMAUgBlAGcAdQBsAGEAcgBnAHMAYwBnAHMAYwBWAGUAcgBzAGkAbwBuACAAMQAuADAAZwBzAGMARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABzAHYAZwAyAHQAdABmACAAZgByAG8AbQAgAEYAbwBuAHQAZQBsAGwAbwAgAHAAcgBvAGoAZQBjAHQALgBoAHQAdABwADoALwAvAGYAbwBuAHQAZQBsAGwAbwAuAGMAbwBtAAACAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIBAgEDAQQBBQEGAQcBCAEJAQoBCwEMAQ0BDgEPARABEQESARMBFAEVARYBFwEYARkBGgEbARwBHQEeAR8BIAEhASIBIwAId2hhdHNhcHAHY29udGFjdAhmYWNlYm9vawZmb2xsb3cKZ29vZ2xlcGx1cwZ0dW1ibHIHdHdpdHRlcgl2a29udGFrdGUHeW91dHViZQhnc2MtbG9nbxBlbWFpbC1mb3Itd2lkZ2V0CWljb24tZG9uZQRjaGF0CWluc3RhZ3JhbQhsaW5rZWRpbglwaW50ZXJlc3QFc2hhcmUFcHJvbW8JaWNvbi1oaWRlEGljb24tY2xvc2Utc21hbGwJaWNvbi1zaG93EGljb24tZG9uZS13b3JpbmcFcHJpbnQVY29udHJvbHMtcmFkaW8tc2VsZWN0DmNvbnRyb2xzLXJhZGlvEWNvbnRyb2xzLWNoZWNrYm94GWNvbnRyb2xzLWNoZWNrYm94LXNlbGVjdDIGc3VydmV5CWljb24tYmFjawlpY29uLW5leHQIc3RhcnMtMDIIc3RhcnMtMDEEc2VuZAAAAA==) format('truetype');font-weight:400;font-style:normal}@-webkit-keyframes gscw-bounceInLeft{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(-3000px,0);transform:translate(-3000px,0)}40%{opacity:1;-webkit-transform:translate(35px,0);transform:translate(35px,0)}65%{-webkit-transform:translate(-15px,0);transform:translate(-15px,0)}90%{-webkit-transform:translate(5px,0);transform:translate(5px,0)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-bounceInLeft{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(-3000px,0);transform:translate(-3000px,0)}40%{opacity:1;-webkit-transform:translate(35px,0);transform:translate(35px,0)}65%{-webkit-transform:translate(-15px,0);transform:translate(-15px,0)}90%{-webkit-transform:translate(5px,0);transform:translate(5px,0)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-bounceInRight{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(3000px,0);transform:translate(3000px,0)}40%{opacity:1;-webkit-transform:translate(-35px,0);transform:translate(-35px,0)}65%{-webkit-transform:translate(15px,0);transform:translate(15px,0)}90%{-webkit-transform:translate(-5px,0);transform:translate(-5px,0)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-bounceInRight{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(3000px,0);transform:translate(3000px,0)}40%{opacity:1;-webkit-transform:translate(-35px,0);transform:translate(-35px,0)}65%{-webkit-transform:translate(15px,0);transform:translate(15px,0)}90%{-webkit-transform:translate(-5px,0);transform:translate(-5px,0)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-bounceInUp{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(0,700px);transform:translate(0,700px)}40%{opacity:1;-webkit-transform:translate(0,-35px);transform:translate(0,-35px)}65%{-webkit-transform:translate(0,15px);transform:translate(0,15px)}90%{-webkit-transform:translate(0,-5px);transform:translate(0,-5px)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-bounceInUp{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(0,700px);transform:translate(0,700px)}40%{opacity:1;-webkit-transform:translate(0,-35px);transform:translate(0,-35px)}65%{-webkit-transform:translate(0,15px);transform:translate(0,15px)}90%{-webkit-transform:translate(0,-5px);transform:translate(0,-5px)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-bounceInDown{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(0,-700px);transform:translate(0,-700px)}40%{opacity:1;-webkit-transform:translate(0,35px);transform:translate(0,35px)}65%{-webkit-transform:translate(0,-15px);transform:translate(0,-15px)}90%{-webkit-transform:translate(0,5px);transform:translate(0,5px)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-bounceInDown{0%,100%,40%,65%,90%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate(0,-700px);transform:translate(0,-700px)}40%{opacity:1;-webkit-transform:translate(0,35px);transform:translate(0,35px)}65%{-webkit-transform:translate(0,-15px);transform:translate(0,-15px)}90%{-webkit-transform:translate(0,5px);transform:translate(0,5px)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-bounceOutLeft{20%{opacity:1;-webkit-transform:translate(20px,0);transform:translate(20px,0)}100%{opacity:0;-webkit-transform:translate(-2000px,0);transform:translate(-2000px,0)}}@keyframes gscw-bounceOutLeft{20%{opacity:1;-webkit-transform:translate(20px,0);transform:translate(20px,0)}100%{opacity:0;-webkit-transform:translate(-2000px,0);transform:translate(-2000px,0)}}@-webkit-keyframes gscw-bounceOutRight{20%{opacity:1;-webkit-transform:translate(-20px,0);transform:translate(-20px,0)}100%{opacity:0;-webkit-transform:translate(2000px,0);transform:translate(2000px,0)}}@keyframes gscw-bounceOutRight{20%{opacity:1;-webkit-transform:translate(-20px,0);transform:translate(-20px,0)}100%{opacity:0;-webkit-transform:translate(2000px,0);transform:translate(2000px,0)}}@-webkit-keyframes gscw-slideOutLeft{100%{-webkit-transform:translate(-100%,0);transform:translate(-100%,0)}}@keyframes gscw-slideOutLeft{100%{-webkit-transform:translate(-100%,0);transform:translate(-100%,0)}}@-webkit-keyframes gscw-slideOutRight{100%{-webkit-transform:translate(100%,0);transform:translate(100%,0)}}@keyframes gscw-slideOutRight{100%{-webkit-transform:translate(100%,0);transform:translate(100%,0)}}@-webkit-keyframes gscw-slideInLeft{0%{-webkit-transform:translate(-100%,0);transform:translate(-100%,0)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-slideInLeft{0%{-webkit-transform:translate(-100%,0);transform:translate(-100%,0)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-slideInRight{0%{-webkit-transform:translate(100%,0);transform:translate(100%,0)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-slideInRight{0%{-webkit-transform:translate(100%,0);transform:translate(100%,0)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes gscw-fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes gscw-fadeInLeft{0%{opacity:0;-webkit-transform:translate(-60%,0);transform:translate(-60%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes gscw-fadeInLeft{0%{opacity:0;-webkit-transform:translate(-60%,0);transform:translate(-60%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-fadeInRight{0%{opacity:0;-webkit-transform:translate(60%,0);transform:translate(60%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes gscw-fadeInRight{0%{opacity:0;-webkit-transform:translate(60%,0);transform:translate(60%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-fadeInUp{0%{opacity:0;-webkit-transform:translate(0,60%);transform:translate(0,60%)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes gscw-fadeInUp{0%{opacity:0;-webkit-transform:translate(0,60%);transform:translate(0,60%)}100%{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-fadeInDown{0%{opacity:0;-webkit-transform:translate(0,-60%);transform:translate(0,-60%)}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes gscw-fadeInDown{0%{opacity:0;-webkit-transform:translate(0,-60%);transform:translate(0,-60%)}100%{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-fadeOut{0%{opacity:1}100%{opacity:0}}@keyframes gscw-fadeOut{0%{opacity:1}100%{opacity:0}}@-webkit-keyframes gscw-zoomIn{0%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}50%{opacity:1}100%{-webkit-transform:none;transform:none}}@keyframes gscw-zoomIn{0%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}50%{opacity:1}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}100%{opacity:0}}@keyframes gscw-zoomOut{0%{opacity:1}50%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}100%{opacity:0}}@-webkit-keyframes gscw-swing{0%{opacity:0}20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{opacity:1;-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}100%{-webkit-transform:rotate3d(0,0,1,0deg);transform:rotate3d(0,0,1,0deg)}}@keyframes gscw-swing{0%{opacity:0}20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{opacity:1;-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}100%{-webkit-transform:rotate3d(0,0,1,0deg);transform:rotate3d(0,0,1,0deg)}}@-webkit-keyframes gscw-bounceIn{0%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}30%{-webkit-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}55%{opacity:1;-webkit-transform:scale(.8,.8);transform:scale(.8,.8)}72%{-webkit-transform:scale(1.13,1.13);transform:scale(1.13,1.13)}87%{-webkit-transform:scale(.97,.97);transform:scale(.97,.97)}100%{-webkit-transform:none;transform:none}}@keyframes gscw-bounceIn{0%{opacity:0;-webkit-transform:scale(.3,.3);transform:scale(.3,.3)}30%{-webkit-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}55%{opacity:1;-webkit-transform:scale(.8,.8);transform:scale(.8,.8)}72%{-webkit-transform:scale(1.13,1.13);transform:scale(1.13,1.13)}87%{-webkit-transform:scale(.97,.97);transform:scale(.97,.97)}100%{-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-flipTy{0%{-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;-webkit-transform:rotateY(180deg) scale(.4,.4);transform:rotateY(180deg) scale(.4,.4)}100%{-webkit-transform:rotateY(0) scale(1,1);transform:rotateY(0) scale(1,1)}}@keyframes gscw-flipTy{0%{-webkit-transition-timing-function:ease-in;transition-timing-function:ease-in;-webkit-transform:rotateY(180deg) scale(.4,.4);transform:rotateY(180deg) scale(.4,.4)}100%{-webkit-transform:rotateY(0) scale(1,1);transform:rotateY(0) scale(1,1)}}@-webkit-keyframes gscw-flip{0%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}100%{-webkit-transform:rotateY(0);transform:rotateY(0)}}@keyframes gscw-flip{0%{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}100%{-webkit-transform:rotateY(0);transform:rotateY(0)}}@-webkit-keyframes gscw-revealTouch{0%{margin-top:-200px}100%{margin-top:0}}@keyframes gscw-revealTouch{0%{margin-top:-200px}100%{margin-top:0}}@-webkit-keyframes gscw-typing{0%,100%,80%{opacity:0;-webkit-transform:scale(.8);transform:scale(.8)}40%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}@keyframes gscw-typing{0%,100%,80%{opacity:0;-webkit-transform:scale(.8);transform:scale(.8)}40%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}}@-webkit-keyframes gscw-notify{0%{-webkit-transform:scale(.1,.1);transform:scale(.1,.1);opacity:.3}100%{opacity:1;-webkit-transform:none;transform:none}}@keyframes gscw-notify{0%{-webkit-transform:scale(.1,.1);transform:scale(.1,.1);opacity:.3}100%{opacity:1;-webkit-transform:none;transform:none}}@-webkit-keyframes gscw-highlight{100%{-webkit-transform:none;transform:none}0%,99%{-webkit-transform:translate(0,0);transform:translate(0,0)}20%{-webkit-transform:translate(-5px,0);transform:translate(-5px,0)}60%{-webkit-transform:translate(-2.5px,0);transform:translate(-2.5px,0)}40%{-webkit-transform:translate(5px,0);transform:translate(5px,0)}80%{-webkit-transform:translate(2.5px,0);transform:translate(2.5px,0)}}@keyframes gscw-highlight{100%{-webkit-transform:none;transform:none}0%,99%{-webkit-transform:translate(0,0);transform:translate(0,0)}20%{-webkit-transform:translate(-5px,0);transform:translate(-5px,0)}60%{-webkit-transform:translate(-2.5px,0);transform:translate(-2.5px,0)}40%{-webkit-transform:translate(5px,0);transform:translate(5px,0)}80%{-webkit-transform:translate(2.5px,0);transform:translate(2.5px,0)}}body.gwy07hw{overflow:hidden!important}body.g-2v1k92{overflow:hidden!important}.gvn1hve{cursor:pointer}body.g-qfosdt:before{-webkit-transition:height 500ms cubic-bezier(.455,.03,.515,.955);transition:height 500ms cubic-bezier(.455,.03,.515,.955);content:' ';display:block;visibility:hidden;height:0!important;padding:0;margin:0}.glmf3lc.g-qfosdt:before{-webkit-transition:none!important;transition:none!important}body.g-qfosdt.goxwr28:before{height:42px!important}body.g-qfosdt.g3uwey9:before{-webkit-transition:none!important;transition:none!important}w-div{display:block;vertical-align:inherit}.golblgx,.ge9841k{-webkit-animation-name:gscw-highlight!important;animation-name:gscw-highlight!important;-webkit-animation-duration:600ms!important;animation-duration:600ms!important;-webkit-font-smoothing:subpixel-antialiased;-webkit-transform-origin:left;-ms-transform-origin:left;transform-origin:left}.g-a35rr{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.g3uwey9 *{-webkit-transition:none!important;transition:none!important}</style></head>
+	
+	<body id="ppv4" class="with-logo">
+		<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-NJWZFW"
+			height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NJWZFW');Packt.dataLayer.init();</script>
+
+		
+		<!-- /#page -->
+		
+		<div id="content-overlay"></div>
+		
+					<div id="book-level-overlay" style="display: none;">	
+</div>
+<div id="book-level-lightbox" class="cf" style="display: none;">
+	<div class="book-level-lightbox-inner">
+		<div class="book-level-heading section-inner">
+			<h2>Series &amp; Level <div class="book-level-cross"></div></h2>
+		</div>
+		<div class="section-inner cf">
+			<div class="book-level-underheading">
+				We understand your time is important. Uniquely amongst the major publishers, we seek to develop and publish the broadest range of learning and information products on each technology.  Every Packt product delivers a specific learning pathway, broadly defined by the Series type.  This structured approach enables you to select the pathway which best suits your knowledge level, learning style and task objectives.			
+			</div>
+		</div>
+		<div class="book-level-series">
+			<div class="section-inner book-level-series-inner cf">
+				<div class="three-book-series-row cf">
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Learning</h3>
+						</div>
+						<div class="book-level-series-text">
+							As a new user, these step-by-step tutorial guides will give you all the practical skills necessary to become competent and efficient.
+						</div>
+					</div>
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Beginner's Guide</h3>
+						</div>
+						<div class="book-level-series-text">
+							Friendly, informal tutorials that provide a practical introduction using examples, activities, and challenges.
+						</div>
+					</div>
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Essentials</h3>
+						</div>
+						<div class="book-level-series-text">
+							Fast paced, concentrated introductions showing the quickest way to put the tool to work in the real world.
+						</div>
+					</div>					
+				</div>
+				<div class="three-book-series-row cf">
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Cookbook</h3>
+						</div>
+						<div class="book-level-series-text">
+							A collection of practical self-contained recipes that all users of the technology will find useful for building more powerful and reliable systems.
+						</div>
+					</div>
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Blueprints</h3>
+						</div>
+						<div class="book-level-series-text">
+							Guides you through the most common types of project you'll encounter, giving you end-to-end guidance on how to build your specific solution quickly and reliably.
+						</div>
+					</div>
+					<div class="book-level-series-block">
+						<div class="cf">
+							<h3 class="float-left">Mastering</h3>
+						</div>
+						<div class="book-level-series-text">
+							Take your skills to the next level with advanced tutorials that will give you confidence to master the tool's most powerful features.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="book-level-level">
+			<div class="section-inner cf">
+				<div class="book-level-expo float-left">
+					<h3>Starting</h3>
+					<div class="book-level-text">
+						Accessible to readers adopting the topic, these titles get you into the tool or technology so that you can become an effective user.
+					</div>
+				</div>
+				<div class="book-level-gauges float-left">
+					<div class="book-level-gauge-left"></div>
+					<div class="book-level-line"></div>
+					<!--div class="book-level-gauge-middle"></div>
+					<div class="book-level-line"></div-->
+					<div class="book-level-gauge-right"></div>
+				</div>
+				<div class="book-level-expo float-left">
+					<h3>Progressing</h3>
+					<div class="book-level-text">
+						Building on core skills you already have, these titles share solutions and expertise so you become a highly productive power user.
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+				
+	
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><ul class="selectBox-dropdown-menu selectBox-options form-select-selectBox-dropdown-menu packt-currency-select-box-selectBox-dropdown-menu selectBox-selectBox-dropdown-menu" style="display: none;"><li><a rel="GBP">GBP £</a></li><li><a rel="USD">US $</a></li><li><a rel="EUR">EUR €</a></li><li><a rel="AUD">AU $</a></li><li class="selectBox-selected"><a rel="INR">INR ₹</a></li></ul><div class="respoPage" state="hidden" respo="false"><div class="leftSide" style="left: -260px;"><div><div class="respoLogin" state="folded">Log in</div><div class="respoReg"><a href="https://www.packtpub.com/register">Register</a></div></div><form accept-charset="UTF-8" method="post" id="packt-user-login-form-respo" action="https://www.packtpub.com/books/content/ireport-netbeans" style="display: none;">
+<div><div id="login-form" class="cf">
+	<div id="login-form-email">
+		<div class="form-item" id="email-wrapper">
+ <input type="text" maxlength="128" name="email" id="email" size="24" value="" placeholder="E-mail address" class="form-text required">
+</div>
+	</div>
+	<div id="login-form-pass">
+		<div class="form-item" id="password-wrapper">
+ <input type="password" name="password" id="password" maxlength="128" size="24" placeholder="Password" class="form-text required">
+</div>
+	</div>
+	<div id="login-form-submit">
+		<input type="submit" name="op" id="edit-submit-1" value="Login" class=" form-submit">
+	</div>
+	<br>
+</div>
+<a href="https://www.packtpub.com/account/password">Forgotten your password?</a>
+
+
+
+<input type="hidden" name="form_build_id" id="form-99401b53073f206ad78bb061ba7035f7" value="form-99401b53073f206ad78bb061ba7035f7">
+
+<input type="hidden" name="form_id" id="edit-packt-user-login-form" value="packt_user_login_form">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></form><div class="menu-item-text" id="menu-books_respo" state="folded">
+										<span class="menu-text">Books &amp; Videos</span>
+									</div><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/web-development">Web Development</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/big-data-and-business-intelligence">Big Data &amp; Business Intelligence</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/application-development">Application Development</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/virtualization-and-cloud">Virtualization &amp; Cloud</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/game-development">Game Development</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/networking-and-servers">Networking &amp; Servers</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/hardware-and-creative">Hardware &amp; Creative</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/business">Business</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/all">All Books</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/video">All Videos</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/latest-releases">Latest Releases</a></p><div class="menu-item-text" id="menu-blog_respo" state="folded">
+										<span class="menu-text">Blog</span>
+									</div><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/content/blogs">Blogs</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/content/tech-hub">Tech Hub</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/content/article-network">Articles</a></p><div class="menu-item-text" id="menu-packt_respo" state="folded">
+										<span class="menu-text">Packt</span>
+									</div><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/about">About Us</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/authors">Our Authors</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/trade-partners">Trade &amp; Partners</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/contact-us">Contact Us</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/careers-with-packt">Careers</a></p><div class="menu-item-text" id="menu-support_respo" state="folded">
+										<span class="menu-text">Support</span>
+									</div><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/faq">FAQs</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/ordering">Ordering Information</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/info/packt/terms-and-conditions">Terms &amp; Conditions</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/content/support">Code Downloads &amp; Errata</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/content/errata">Submit Errata</a></p><div class="menu-item-text" id="menu-packtlib_respo" state="folded">
+										<span class="menu-text pl"><img id="pl-img" src="./Report_files/packtlib-logo-dark.png"></span>
+										<span class="menu-text mob-pl"><img id="pl-img" src="./Report_files/packtlib-logo-light.png"></span>
+									</div><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/subscription/packtlib">Subscribe</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/books/subscription/packtlib-business">PacktLib For Business</a></p><p id="_respo" style="display: none;"><a href="https://www.packtpub.com/packtlib">Take me to the Library</a></p></div><div id="page" class="" checkout="">
+			<div id="page-header">
+							<div id="account-bar" class="cf">
+				<div class="section-inner">
+					<div id="account-bar-status" class="cf">
+						<div id="account-bar-currency-selector">
+							<form accept-charset="UTF-8" method="post" id="packt-currency-select-form" class="float-left">
+								<div class="form-item" id="edit-currency-wrapper">
+									<select name="currency" class="form-select packt-currency-select-box selectBox" id="edit-currency" style="display: none;">
+										<option value="GBP">GBP £</option>
+										<option value="USD">US $</option>
+										<option value="EUR">EUR €</option>
+										<option value="AUD">AU $</option>
+									<option value="INR">INR ₹</option></select><a class="selectBox form-select packt-currency-select-box selectBox-dropdown" title="" tabindex="0" style="width: 64px; display: inline-block;"><span class="selectBox-label" style="width: 42px;">INR ₹</span><span class="selectBox-arrow">▼</span></a>
+								</div>
+								<input type="submit" name="op" value="" style="display: none;" class="form-submit">			
+								<input type="hidden" name="form_id" id="edit-packt-currency-select" value="packt_currency_select_form">
+							</form>
+						</div>				
+						<div class="account-bar-divider float-left">|</div>		
+						<div id="account-bar-status-security"></div>
+						<noscript>
+							&lt;div id="account-bar-login-register-ns"&gt;
+								&lt;a href="/account"&gt;My Account&lt;/a&gt;
+							&lt;/div&gt;
+						</noscript>
+						<div id="account-bar-login-register" style="display: block;">
+							<a href="https://www.packtpub.com/books/content/ireport-netbeans#" class="login-popup"><div class="float-left">Log in</div></a>
+							<div class="account-bar-divider float-left">|</div>	
+							<a href="https://www.packtpub.com/register"><div class="float-left">Register</div></a>
+						</div>
+						
+						<div id="account-bar-logged-in" style="display: none;">
+							<a href="https://www.packtpub.com/account">
+								<div class="float-left"><strong>My Account</strong></div>
+							</a>
+							<div class="account-bar-divider float-left">|</div>	
+							<a href="https://www.packtpub.com/logout"><div class="float-left">Sign out</div></a>
+						</div>
+					</div>
+					<div id="account-bar-form">
+						<div id="account-bar-form-login" class="cf">
+							<div class="account-bar-form-left">
+								<h4>Log in to your account</h4>
+								<form accept-charset="UTF-8" method="post" id="packt-user-login-form" action="https://www.packtpub.com/books/content/ireport-netbeans">
+<div><div id="login-form" class="cf">
+	<div id="login-form-email">
+		<div class="form-item" id="email-wrapper">
+ <input type="text" maxlength="128" name="email" id="email" size="24" value="" placeholder="E-mail address" class="form-text required">
+</div>
+	</div>
+	<div id="login-form-pass">
+		<div class="form-item" id="password-wrapper">
+ <input type="password" name="password" id="password" maxlength="128" size="24" placeholder="Password" class="form-text required">
+</div>
+	</div>
+	<div id="login-form-submit">
+		<input type="submit" name="op" id="edit-submit-1" value="Login" class=" form-submit">
+	</div>
+	<br>
+</div>
+<a href="https://www.packtpub.com/account/password">Forgotten your password?</a>
+
+
+
+<input type="hidden" name="form_build_id" id="form-99401b53073f206ad78bb061ba7035f7" value="form-99401b53073f206ad78bb061ba7035f7">
+
+<input type="hidden" name="form_id" id="edit-packt-user-login-form" value="packt_user_login_form">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></form>
+							</div>
+							<div class="account-bar-form-right">
+								<h4>Not yet a member?</h4>
+								<p>Register for an account and access leading-edge content on emerging technologies.</p>
+								<p><a class="account-bar-toggle register" href="https://www.packtpub.com/register">Register now</a></p>
+							</div>
+						</div>						
+						<div id="account-bar-form-close"><a href="https://www.packtpub.com/books/content/ireport-netbeans#">Close</a></div>
+					</div>
+				</div>
+			</div>
+										<div id="menu-bar">
+				<div class="section-inner cf">
+					<div id="menuIcon"></div>
+					<div id="menu-links" class="">
+						<a href="https://www.packtpub.com/">
+							<div class="menu-item-tab">
+								<div class="menu-item-text dummy" id="menu-packt-logo">
+									<span class="alt">Packt Logo</span>
+								</div>
+							</div>
+						</a>
+													<a href="https://www.packtpub.com/all">
+								<div class="menu-item-tab">
+									<div class="menu-item-text" id="menu-books">
+										<span class="menu-text">Books &amp; Videos</span>
+									</div>
+								</div>
+							</a>
+							<a href="https://www.packtpub.com/books/content/blogs">
+								<div class="menu-item-tab">
+									<div class="menu-item-text" id="menu-blog">
+										<span class="menu-text">Blog</span>
+									</div>
+								</div>
+							</a>
+							<a href="https://www.packtpub.com/books/info/packt/about">						
+								<div class="menu-item-tab">
+									<div class="menu-item-text" id="menu-packt">
+										<span class="menu-text">Packt</span>
+									</div>
+								</div>
+							</a>
+							<a href="https://www.packtpub.com/books/content/support">						
+								<div class="menu-item-tab">
+									<div class="menu-item-text" id="menu-support">
+										<span class="menu-text">Support</span>
+									</div>
+								</div>
+							</a>
+							
+							<a href="https://www.packtpub.com/packtlib">
+							<div class="menu-item-tab menu-item-tab pl-tab">
+									<div class="menu-item-text" id="menu-packtlib">
+										<span class="menu-text pl"><img id="pl-img" src="./Report_files/packtlib-logo-dark.png"></span>
+										<span class="menu-text mob-pl"><img id="pl-img" src="./Report_files/packtlib-logo-light.png"></span>
+									</div>
+								</div>
+							</a>
+											</div>
+					<div id="menu-icons" class="">
+													<a href="https://www.packtpub.com/books/content/ireport-netbeans#">
+								<div class="menu-item-tab">
+									<div class="menu-item-icon" id="menu-search">
+										<span class="alt">Search</span>
+									</div>
+								</div>
+							</a>
+							<a href="https://www.packtpub.com/collection">
+								<div class="menu-item-tab">
+									<div class="menu-item-icon dummy" id="menu-collection">
+										<span class="alt">My Collection</span>
+									</div>
+								</div>
+							</a>
+												<a href="https://www.packtpub.com/cart/checkout">
+							<div class="menu-item-tab last">
+								<div class="menu-item-icon" id="menu-cart">
+									<div id="cart-icon-count" class="cart-icon-count" style="display: none;">0</div>
+									<span class="alt">Cart</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="menu-bar-popup" class="cf">	
+				<div id="menu-bar-popup-inner" class="cf"></div>	
+				<div class="section-inner cf">	
+
+											<div class="menu-bar-popup-menu threecol cf" id="menu-books-popup">
+							<div class="menu-bar-popup-section-left threecol">
+								<div class="menu-bar-popup-section-left-inner cf">
+									<p class="menu-bar-popup-title">Book &amp; Video Categories</p>
+									<div id="books-menu">
+										<div class="cf">
+											<div class="books-menu-column categories "><div class="inner"><p><a href="https://www.packtpub.com/web-development">Web Development</a></p><p><a href="https://www.packtpub.com/big-data-and-business-intelligence">Big Data &amp; Business Intelligence</a></p><p><a href="https://www.packtpub.com/application-development">Application Development</a></p><p><a href="https://www.packtpub.com/virtualization-and-cloud">Virtualization &amp; Cloud</a></p></div></div><div class="books-menu-column categories "><div class="inner"><p><a href="https://www.packtpub.com/game-development">Game Development</a></p><p><a href="https://www.packtpub.com/networking-and-servers">Networking &amp; Servers</a></p><p><a href="https://www.packtpub.com/hardware-and-creative">Hardware &amp; Creative</a></p><p><a href="https://www.packtpub.com/business">Business</a></p></div></div><div class="books-menu-column categories last"><div class="inner"><p><a href="https://www.packtpub.com/all">All Books</a></p><p><a href="https://www.packtpub.com/video">All Videos</a></p><p><a href="https://www.packtpub.com/latest-releases">Latest Releases</a></p></div></div>										</div>
+																	</div>
+							</div>
+						</div>
+						<div class="menu-bar-popup-section-right threecol">
+															<div class="menu-bar-popup-section-right-inner cf">
+									<div id="deal-of-the-day-banner" class="cf">
+										<div id="menu-bar-dotd-preview-thumb">
+											<a href="https://www.packtpub.com/books/deal-of-the-day">
+												<img src="./Report_files/7580OS_Learning ROS for Robotics Programming - Second Edition.jpg" alt="Learning ROS for Robotics Programming - Second Edition" title="" width="150" height="185" class="lazyload-disabled imagecache imagecache-featured_book_block">												<div class="menu-bar-dotd-percentage">
+													<div class="menu-bar-dotd-percentage-text">
+														50<sup class="dotd-sup">%</sup><div class="dotd-sub">off</div>
+													</div>
+												</div>
+											</a>
+										</div>
+										<div id="menu-bar-dotd-preview-text">
+											<p class="menu-bar-popup-title"><a href="https://www.packtpub.com/books/deal-of-the-day">Deal of the Day</a></p>
+											<p>Your one-stop guide to the Robot Operating System</p>
+											
+																																		</div>
+											<div class="cf deal-of-the-day-in-header">
+												<div class="dots-main-book-price float-left">
+													<div class="book-top-pricing-main-price">
+														<div class="book-top-pricing-main-ebook-price india-currency  ">₨839.40</div>
+													</div>
+													<div class="dotd-rrp-price">RRP ₨2,797.99</div>
+												</div>
+
+												<form action="https://www.packtpub.com/add_to_cart/20973" accept-charset="UTF-8" method="post" id="packt-libraries-add-to-cart-form" class="packt-libraries-add-to-cart-form">
+<div>
+<div class="book-top-addtocart-inner">	
+	<div class="book-top-addtocart-logo"></div>
+	<div class="book-top-addtocart-separator"></div>
+	
+	<input type="submit" name="submit-20973" id="submit-20973" value="Add to Cart" class=" form-submit">
+	<input type="hidden" name="nids" id="nids" value="20973">
+
+<input type="hidden" name="qtys" id="qtys" value="1">
+
+<input type="hidden" name="upsell" id="edit-upsell" value="1">
+
+
+
+
+
+
+<input type="hidden" name="form_build_id" id="form-35ba7ac229c1731b6b18c873dbebcd2d" value="form-35ba7ac229c1731b6b18c873dbebcd2d">
+
+<input type="hidden" name="form_id" id="edit-packt-libraries-add-to-cart-form" value="packt_libraries_add_to_cart_form">
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div></form>
+											</div>
+										</div>
+										<div class="cf newsletter-signup-form" newsletter_id="280">
+											<div class="dotd-signup-text"><strong>Sign up here to get these deals straight to your inbox</strong></div> 
+											<form accept-charset="UTF-8" method="post" id="packt-v3-subscribtion-dotd-form">
+<div><div class="form-item">
+ 
+</div>
+<div class="form-item" id="edit-mail-wrapper">
+ <input type="text" maxlength="128" name="mail" id="edit-mail" size="60" value="" placeholder="Enter your email address" class="form-text">
+</div>
+<input type="hidden" name="newsletter_id" id="edit-newsletter-id" value="">
+<input type="submit" name="op" id="edit-submit-3" value="Submit" class=" form-submit">
+<input type="hidden" name="form_build_id" id="form-663fcd1e3832c039a054ae3c8f3dce17" value="form-663fcd1e3832c039a054ae3c8f3dce17">
+<input type="hidden" name="form_id" id="edit-packt-v3-subscribtion-dotd-form" value="packt_v3_subscribtion_dotd_form">
+
+</div></form>
+										</div>
+									</div>
+															</div>
+						</div>
+
+						<div class="menu-bar-popup-menu twocol cf" id="menu-blog-popup">
+							<div class="menu-bar-popup-section-left twocol">
+								<div class="menu-bar-popup-section-left-inner cf">
+									<p class="menu-bar-popup-title">Blog</p>
+									<div class="packt-menu cf">
+										<div class="books-menu-column">
+											<div class="inner">
+												<p><a href="https://www.packtpub.com/books/content/blogs">Blogs</a></p>
+												<p><a href="https://www.packtpub.com/books/content/tech-hub">Tech Hub</a></p>
+												<p><a href="https://www.packtpub.com/books/content/article-network">Articles</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>						
+							<div class="menu-bar-popup-section-right twocol">
+								<div class="menu-bar-popup-section-right-inner cf">
+									<div id="menu-bar-article-preview-thumb">
+										<img src="./Report_files/Ipython_Cover image.png" alt="How to connect your Vim editor to IPython" title="" width="240" height="114" class="lazyload-disabled imagecache imagecache-ppv4_header_article_thumb">									</div>
+									<div id="menu-bar-article-preview-text">
+										<p class="menu-bar-popup-title"><a href="https://www.packtpub.com/books/content/how-connect-your-vim-editor-ipython">How to connect your Vim editor to IPython</a></p>
+										<p id="menu-bar-article-one-liner">In this post we will exmaine how to send your codes throughout VI (Vi IMproved) to IPython a.k.a jupyter.</p>
+										<p><a href="https://www.packtpub.com/books/content/blogs">Read all our blogs</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="menu-bar-popup-menu cf" id="menu-packt-popup">
+							<div class="menu-bar-popup-section-left twocol">
+								<div class="menu-bar-popup-section-left-inner cf">
+									<p class="menu-bar-popup-title">Packt Publishing</p>
+									<div class="packt-menu cf">
+										<div class="books-menu-column">
+											<div class="inner">
+												<p><a href="https://www.packtpub.com/books/info/packt/about">About Us</a></p>
+												<p><a href="https://www.packtpub.com/books/info/packt/authors">Our Authors</a></p>
+												<p><a href="https://www.packtpub.com/books/info/packt/trade-partners">Trade &amp; Partners</a></p>
+											<!--<p><a href="/blog-network">Blog</a></p>
+											<p><a href="/techprimer-network">Technology Primers</a></p>-->
+										</div>
+									</div>
+									<div class="books-menu-column">
+										<div class="inner">
+											<p><a href="https://www.packtpub.com/books/info/packt/contact-us">Contact Us</a></p>
+											<p><a href="https://www.packtpub.com/books/info/packt/careers-with-packt">Careers</a></p>
+											<!--<p><a href="/article-network">Articles</a></p>-->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+						<!--<div class="menu-bar-popup-section-right twocol">
+							<div class="menu-bar-popup-section-right-inner cf">
+								<div id="menu-bar-article-preview-thumb">
+									<noscript><img src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_header_article_thumb/Ipython_Cover image.png" alt="How to connect your Vim editor to IPython" title="" width="240" height="114" class=" imagecache imagecache-ppv4_header_article_thumb"/></noscript><img src="/sites/default/files/blank.gif" alt="How to connect your Vim editor to IPython" title="" width="240" height="114" data-original="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/ppv4_header_article_thumb/Ipython_Cover image.png" class=" imagecache imagecache-ppv4_header_article_thumb"/>								</div>
+								<div id="menu-bar-article-preview-text">
+									<p class="menu-bar-popup-title"><a href="/books/content/how-connect-your-vim-editor-ipython">How to connect your Vim editor to IPython</a></p>
+									<p id="menu-bar-article-one-liner"></p>
+									<p><a href="/articles">Read all our articles</a></p>
+								</div>
+							</div>
+						</div>-->
+					</div>
+
+
+					<div class="menu-bar-popup-menu cf" id="menu-support-popup">
+						<div class="menu-bar-popup-section-left twocol">
+							<div class="menu-bar-popup-section-left-inner cf">
+								<p class="menu-bar-popup-title">Support</p>
+								<div class="packt-menu cf">
+									<div class="books-menu-column">
+										<div class="inner">
+											<p><a href="https://www.packtpub.com/books/info/packt/faq">FAQs</a></p>
+											<p><a href="https://www.packtpub.com/books/info/packt/ordering">Ordering Information</a></p>
+											<p><a href="https://www.packtpub.com/books/info/packt/terms-and-conditions">Terms &amp; Conditions</a></p>
+										</div>
+									</div>
+									<div class="books-menu-column">
+										<div class="inner">
+											<p><a href="https://www.packtpub.com/books/content/support">Code Downloads &amp; Errata</a></p>
+											<p><a href="https://www.packtpub.com/books/content/errata">Submit Errata</a></p>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+
+					<div class="menu-bar-popup-menu cf" id="menu-packtlib-popup">
+						<div class="menu-bar-popup-section-left twocol">
+							<div class="menu-bar-popup-section-left-inner cf">
+								<p class="menu-bar-popup-title">PacktLib</p>
+								<div class="packt-menu cf">
+									<div class="books-menu-column">
+										<div class="inner">
+											<p><a href="https://www.packtpub.com/books/subscription/packtlib">Subscribe</a></p>
+											<p><a href="https://www.packtpub.com/books/subscription/packtlib-business">PacktLib For Business</a></p>
+											<p><a href="https://www.packtpub.com/packtlib">Take me to the Library</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="menu-bar-popup-menu cf" id="menu-search-popup">
+						<div class="menu-bar-popup-search-inner">
+							<form accept-charset="UTF-8" method="post" id="packt-libraries-main-search-form">
+<div>
+<div id="menu-bar-search" class="cf">
+	<div id="menu-bar-search-title">
+		<div class="form-item">Search</div>
+	</div>
+	<div id="menu-bar-search-box">
+		<div class="form-item" id="main-search-keys-wrapper">
+ <input type="text" name="keys" id="main-search-keys" size="49" value="" placeholder="Enter your search terms..." class="form-text">
+</div>
+	</div>
+	<div id="menu-bar-search-button">
+		<input type="submit" name="op" id="edit-submit-5" value="Search" class=" form-submit">
+	</div>
+	<input type="hidden" name="sort" id="edit-sort" value="0">
+
+<input type="hidden" name="types" id="edit-types" value="0">
+
+<input type="hidden" name="forthcoming" id="edit-forthcoming" value="1">
+
+<input type="hidden" name="available" id="edit-available" value="1">
+
+<input type="hidden" name="count" id="edit-count" value="20">
+
+
+
+
+<input type="hidden" name="form_build_id" id="form-6af0474bd2e33c7acf9f0466c1d2a8b0" value="form-6af0474bd2e33c7acf9f0466c1d2a8b0">
+
+<input type="hidden" name="form_id" id="edit-packt-libraries-main-search-form" value="packt_libraries_main_search_form">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+<div class="facet-search-cross facet-search-cross-autocomplete"></div>
+</div></form>
+						</div>
+					</div>
+					
+					<div class="menu-bar-popup-menu cf" id="menu-cart-popup">
+						<div class="menu-bar-popup-section-left even">
+							<div class="menu-bar-popup-section-left-inner cf">
+								<div id="menu-bar-popup-cart-preview">
+									<div id="menu-bar-popup-cart-item-preview">
+
+										<div id="menu-bar-popup-cart-item-preview-image">
+											<img src="">
+										</div>
+										<p class="menu-bar-popup-title">Added to Cart</p>
+										<p id="menu-bar-popup-cart-item-preview-title"></p>
+										<p id="menu-bar-popup-cart-item-preview-oneliner"></p>
+										<p id="menu-bar-popup-cart-item-preview-additional">...and <span></span> more</p>
+										<p class="price"><span id="menu-bar-popup-cart-item-preview-currency"></span><span id="menu-bar-popup-cart-item-preview-price"></span></p>
+									</div>
+								</div>
+								<p id="menu-bar-popup-cart-empty-preview" style="display: block;">
+									You don't have anything in your cart right now.
+								</p>
+							</div>
+						</div>
+						
+						<div class="menu-bar-popup-section-right even">
+							<div class="menu-bar-popup-section-right-inner cf">
+								<div id="menu-bar-popup-content">
+									<div class="cf">
+										<p id="menu-bar-popup-subtotal-title" class="menu-bar-popup-title float-left">Subtotal</p>
+										<p id="menu-bar-popup-subtotal-value" class="menu-bar-popup-title float-right price"> 0.00</p>
+										<p id="menu-bar-popup-subtotal-currency" class="menu-bar-popup-title float-right price"></p>
+									</div>
+									<p><strong>Free shipping</strong> on print orders for US, UK, Europe and selected Asian countries</p>
+									<form>
+										<a href="https://www.packtpub.com/cart/checkout" class="button-link grey">View Cart</a>
+										<span></span>
+										<a href="https://www.packtpub.com/cart/checkout/?checkout_step=payment" class="button-link">Check Out</a>
+									</form>
+								</div>
+								<div id="checkout-close" onclick="Packt.headerMenu.hideMenuPopup()"></div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="menu-bar-popup-menu cf" id="menu-cart-small">
+						<div>
+							<div class="small-popup-outer float-right">
+								<div class="small-popup-tick">
+									&nbsp;
+								</div>
+								<div class="small-popup-text">
+									<strong>
+										Title added to cart
+									</strong>
+								</div>
+								<div class="small-popup-seperator">
+								</div>
+								<div class="small-popup-arrows">
+&nbsp;
+								</div>
+							</div>
+						</div>
+					</div>
+							</div>
+			<div id="menu-bar-popup-inner-bottom" class="cf"></div>
+		</div>
+			</div>
+						<div id="main-container" class="not-front not-logged-in page-node node-type-article no-sidebars page-books-content-ireport-netbeans section-books node-full-view ">
+				<div id="main" class="">
+										
+											 <!-- #content -->
+					 	<div id="content">
+						 							 		<div id="title-bar" class="title-bar-orange">
+						 			<div class="section-inner cf">
+						 				<div id="title-bar-breadcrumb">
+						 					<div class="breadcrumb"><a href="https://www.packtpub.com/">Home</a>&nbsp; &gt; &nbsp;<a href="https://www.packtpub.com/books/content/article-network">Articles</a>&nbsp; &gt; &nbsp;<a href="https://www.packtpub.com/books/content/article-network?search=&amp;category_list%5BHardware+%26+Creative%5D=Hardware+%26+Creative">Hardware &amp; Creative</a>&nbsp; &gt; &nbsp;<a href="https://www.packtpub.com/books/content/ireport-netbeans" class="active">iReport in NetBeans</a></div>						 				</div>
+							 			<div id="title-bar-title"><h1>iReport in NetBeans</h1></div>
+							 			<div id="title-bar-right"></div>
+						 			</div>
+						 		</div>
+						 							 	
+					 							 			<div class="section-inner">
+					 							 		
+						 							 			<div id="messages-container">
+							 							 			</div>
+						 							 		
+					 		
+																							
+												
+							<a name="main-content" id="main-content"></a>
+							
+<div id="main-article" class="article cf" itemscope="" itemtype="http://schema.org/Article">
+        
+	<div class="panel-display panel-packt-cat clear-block">
+		<div class="panel-panel-top-wrapper">
+			<div class="panel-panel panel-col-first">
+		    	<div class="inside">
+
+<div id="left-side-menu" class="menu-packt-publishers">
+	<div id="left-side-menu-inner">
+		<h1>Packt Publishing</h1>
+		
+						<div class="left-menu-item ">
+					<a href="https://www.packtpub.com/books/info/packt/about" class="navigation">About Us</a>				</div>
+							<div class="left-menu-item border-top">
+					<a href="https://www.packtpub.com/books/info/packt/authors" class="navigation">Our Authors</a>				</div>
+							<div class="left-menu-item border-top">
+					<a href="https://www.packtpub.com/books/info/packt/careers-with-packt" class="navigation">Careers with Packt</a>				</div>
+							<div class="left-menu-item border-top">
+					<a href="https://www.packtpub.com/books/info/packt/contact-us" class="navigation">Contact Packt</a>				</div>
+			
+			</div>
+</div></div>
+			</div>
+			<div class="panel-panel panel-col-last">
+		    	<div class="inside">					
+					<div class="article-image" itemprop="image" itemtype="http://schema.org/URL" itemscope="">
+													<noscript>&lt;img src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/article_image/book_images_webapp/9781847198808.jpg" alt="" title="" class="article_image imagecache imagecache-article_image" itemprop="image"/&gt;</noscript><img src="./Report_files/9781847198808.jpg" alt="" title="" data-original="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/article_image/book_images_webapp/9781847198808.jpg" class="article_image imagecache imagecache-article_image" itemprop="image" style="opacity: 1;">											</div>
+						                    
+<div class="article-book-block cf">
+    <div class="featured-book-tab">Featured Book</div>
+    <div class="image">
+    	<a href="https://www.packtpub.com/big-data-and-business-intelligence/ireport-37">
+	        <noscript>&lt;img src="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/article_featured_book/8808_MockupCover.jpg" alt="" title="" class="article_image imagecache imagecache-article_featured_book"/&gt;</noscript><img src="./Report_files/8808_MockupCover.jpg" alt="" title="" data-original="//d255esdrn735hr.cloudfront.net/sites/default/files/imagecache/article_featured_book/8808_MockupCover.jpg" class="article_image imagecache imagecache-article_featured_book" style="opacity: 1;">		</a>
+				
+<div class="share-buttons-line share-buttons-small">
+	<div class="share-icon-background">
+		<a class="share-link" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.packtpub.com/books/content/ireport-netbeans&amp;title=&amp;source=Packt+Publishing&amp;summary=">
+			<div class="share-icon linkedin"></div>
+		</a>
+	</div>
+	<div class="share-icon-background">
+		<a class="share-link" target="_blank" href="https://www.twitter.com/share?url=https://www.packtpub.com/books/content/ireport-netbeans&amp;text=">
+			<div class="share-icon twitter"></div>
+		</a>
+	</div>
+	<div class="share-icon-background">
+		<a class="share-link" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.packtpub.com/books/content/ireport-netbeans">
+			<div class="share-icon facebook"></div>
+		</a>
+	</div>
+	<div class="share-icon-background last">
+		<a class="share-link" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.packtpub.com/books/content/ireport-netbeans">
+			<div class="share-icon google-plus"></div>
+		</a>
+	</div>
+</div>    </div>
+    <div class="content">
+        <h4>
+        	<a href="https://www.packtpub.com/big-data-and-business-intelligence/ireport-37">
+	            iReport 3.7	       	</a>
+        </h4>
+        <p class="author">
+            <br>
+            <span class="date-display-single">
+                April 2010            </span>
+        </p>
+        <div class="rating cf">
+                    </div>
+        <p class="price">
+            ₨221.70        </p>
+        <div class="buy-now">
+    		<form action="https://www.packtpub.com/add_to_cart/4711" accept-charset="UTF-8" method="post" id="packt-libraries-add-to-cart-form-article" class="packt-libraries-add-to-cart-form">
+<div><div class="book-top-addtocart-inner">
+	<div class="book-top-addtocart-logo">
+		
+	</div>
+	<div class="book-top-addtocart-separator">
+			
+		</div>
+	<input type="submit" name="submit-4711" id="submit-4711" value="Buy Now" class=" form-submit">
+	<input type="hidden" name="nids" id="nids" value="4711">
+
+<input type="hidden" name="qtys" id="qtys" value="1">
+
+<input type="hidden" name="upsell" id="edit-upsell" value="1">
+
+
+
+
+
+
+<input type="hidden" name="form_build_id" id="form-8c64bc129e94897c9948aa2daa24a392" value="form-8c64bc129e94897c9948aa2daa24a392">
+
+<input type="hidden" name="form_id" id="edit-packt-libraries-add-to-cart-form-article" value="packt_libraries_add_to_cart_form_article">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div></form>
+        </div>
+        <div class="hidden" id="article-upsell-book-name" title="iReport 3.7"></div>
+    </div>
+    <div id="article-buy-now-responsive">
+		<form action="https://www.packtpub.com/add_to_cart/4711" accept-charset="UTF-8" method="post" id="packt-libraries-add-to-cart-form-article" class="packt-libraries-add-to-cart-form">
+<div><div class="book-top-addtocart-inner">
+	<div class="book-top-addtocart-logo">
+		
+	</div>
+	<div class="book-top-addtocart-separator">
+			
+		</div>
+	<input type="submit" name="submit-4711" id="submit-4711" value="Buy Now" class=" form-submit">
+	<input type="hidden" name="nids" id="nids" value="4711">
+
+<input type="hidden" name="qtys" id="qtys" value="1">
+
+<input type="hidden" name="upsell" id="edit-upsell" value="1">
+
+
+
+
+
+
+<input type="hidden" name="form_build_id" id="form-8c64bc129e94897c9948aa2daa24a392" value="form-8c64bc129e94897c9948aa2daa24a392">
+
+<input type="hidden" name="form_id" id="edit-packt-libraries-add-to-cart-form-article" value="packt_libraries_add_to_cart_form_article">
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div></form>
+    </div>
+    <div class="reading-level">
+        <!--h4>Reading Level</h4-->
+        <div class="level-info-container show-level-info cf">
+            <div class="book-level-information"></div>
+            <div class="book-level-1 float-left"></div>        
+            <div class="level-text float-left">
+            	            </div>
+        </div>
+        <p>
+            Learn how to use iReport to create, design, format, and export reports        </p>
+    </div>
+</div>
+                                       <div class="article-content" itemprop="articleBody">					
+                        <h1>Creating different types of reports inside the NetBeans IDE</h1>
+<p>The first step is to download the NetBeans IDE and the iReport plugin for this. The iReport plugin for NetBeans is available for free download at the following locations: <a href="http://sourceforge.net/projects/ireport/files/" target="_blank">https://sourceforge.net/projects/ireport/files</a> or <a href="http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=4425" target="_blank">http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=4425</a></p>
+<p>After downloading the plugin, follow the listed steps to install the plugin in NetBeans:</p>
+<ol>
+<li>Start the NetBeans IDE.</li>
+<li>Go to <b>Tools | Plugins</b>.</li>
+<li>Select the <b>Downloaded</b> tab.</li>
+<li>Press <b>Add Plugins…</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_01.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Select the plugin files. For iReport 3.7.0 the plugins are: <i>iReport-3.7.0.nbm</i>, <i>jasperreports-components-plugin-3.7.0.nbm</i>, <i>jasperreportsextensions-plugin-3.7.0.nbm</i>, and <i>jasperserver-plugin-3.7.0.nbm</i>. After opening the plugin files you will see the following screen:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_02.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Check the <b>Install</b> checkbox of <b>ireport-designer</b>, and press the <b>Install</b> button at the bottom of the window. The following screen will appear:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_03.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Next &gt;</b>, and accept the terms of the <b>License Agreement</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_04.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>If the <b>Verify Certificate</b> dialog box appears, click <b>Continue</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_05.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Install</b>, and wait for the installer to complete the installation.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_06.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>After the installation is done, press <b>Finish</b> and close the Plugins dialog. If the IDE requests for a restart, then do it. Now the IDE is ready for creating reports.</li>
+</ol>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_07.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<h1>Creating reports</h1>
+<p>We have already learnt about creating various types of reports, such as reports without parameters, reports with parameters, reports with variables, subreports, crosstab reports, reports with charts and images, and so on. We have also attained knowledge associated with these types of reports. Now, we will learn quickly how to create these reports using NetBeans with the help of the installed iReport plugins.</p>
+<h2>Creating a NetBeans database JDBC connection</h2>
+<p>The first step is to create a database connection, which will be used by the report data sources. Follow the listed steps:</p>
+<ol>
+<li>Select the <b>Services</b> tab from the left side of the project window.</li>
+<li>Select <b>Databases</b>.</li>
+<li>Right-click on <b>Databases</b>, and press <b>New Connection…</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_08.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>In the <b>New Database Connection</b> dialog, set the following under <b>Basic setting</b>, and check the <b>Remember password</b> checkbox:</li>
+</ol>
+<p></p><table style="border: 1px solid #000000;" width="296" align="center" border="1" cellpadding="7" cellspacing="0">
+<tbody>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Option</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>Value</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Driver Name</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>MySQL (Connector/J Driver)</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Host</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>localhost</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Port</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>3306</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Database</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>inventory</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>User Name</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>root</b></p>
+</td>
+</tr>
+<tr valign="TOP">
+<td width="133">
+<p align="LEFT"><b>Password</b></p>
+</td>
+<td width="133">
+<p align="LEFT"><b>packt</b></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_09.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<ol start="5">
+<li>Press <b>OK</b>. Now the connection is created, and you can see this under the <b>Services | Databases</b> section, as shown in the following screenshot:</li>
+</ol>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_10.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<h2>Creating a report data source</h2>
+<p>The NetBeans database JDBC connection created previously will be used by a report data source that will be used by the report. Follow the listed steps to create the data source:</p>
+<ol>
+<li>From the NetBeans toolbar, press the <b>Report Datasources</b> button. You will see the following dialog box:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_11.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>New</b>.</li>
+<li>Select <b>NetBeans Database JDBC connection</b>, and press <b>Next &gt;</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_12.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Enter <b>inventory</b> in the <b>Name</b> field, and from the <b>Connection</b> drop-down list, select <b>jdbc:mysql://localhost:3306/inventory [root on Default schema]</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_13.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Test</b>, and if the connection is successful, press <b>Save</b> and close the <b>Connections / Datasources</b> dialog box.</li>
+</ol>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_14.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+                        <h2>Creating a simple report</h2>
+<p>We are going to create a report, which shows the list of products. Just follow the listed steps:</p>
+<ol>
+<li>Go to <b>File | New File…</b>.</li>
+<li>Select <b>Report</b> from the <b>Categories:</b> section and <b>Report Wizard</b> from the <b>File Types:</b> section, as shown in the next screenshot:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_15.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Next &gt;</b>. Select the <b>Simple Blue</b> layout and press <b>Next &gt;</b> again.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_16.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Enter <b>ProductListNB.jrxml</b> as <b>File Name:</b>, and <b>Browse…</b> to the <i>reports</i> folder.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_17.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Next &gt;</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_18.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Select <b>inventory</b> from the <b>Connections / Data Sources</b> options.</li>
+<li>Write the following SQL command as the query:<ol>
+<pre>SELECT ProductCode, Name, Description<br>FROM Product<br></pre>
+</ol></li>
+<li>Press <b>Next &gt;</b>. You will see the following screen:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_19.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Select all the fields, press <b>&gt;&gt;</b>, and then press <b>Next &gt;</b>.</li>
+<li>Press <b>Next &gt;</b> again without selecting any group.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_20.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>Finish</b>. You will see the following output:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_21.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Click on the <b>Preview</b> button to see the output, as shown in the following screenshot:</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_22.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>You can design the report in the <b>Designer</b> section as per your design requirements.</li>
+</ol>
+<h1>Creating a parameterized report</h1>
+<p>We are going to create a report in NetBeans that shows the personal information of a particular customer. Follow the listed steps:</p>
+<ol>
+<li>Go to <b>File | New File…</b>.</li>
+<li>Go to <b>File | New File…</b>.</li>
+<li>Select <b>Report</b> from the <b>Categories:</b> section and <b>Report Wizard</b> from the <b>File Types:</b> section.</li>
+<li>Press <b>Next &gt;</b> and select <b>Simple Blue</b> and press <b>Next &gt;</b> again.</li>
+<li>Enter <b>ParticularCustomerNB.jrxml</b> as the <b>File Name:</b>.</li>
+<li>Browse… to the <i>reports</i> folder.</li>
+<li>Press <b>Next &gt;</b>.</li>
+<li>Select <b>inventory</b> from the <b>Connections / Data Sources</b> drop-down list.</li>
+<li>Write the following SQL command as the query:
+<pre><br>SELECT * FROM Customer<br></pre>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_23.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+</li>
+<li>Press <b>Next &gt;</b>.
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_24.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+</li>
+<li>Select all the fields, press <b>&gt;&gt;</b>, and then press <b>Next &gt;</b>.<b>&gt;&gt;</b></li>
+<li>Press <b>Next &gt;</b> again without selecting any group.</li>
+<li>Press <b>Finish</b>. You will see the <b>Designer</b> view of the report.</li>
+<li>From the <b>Report Inspector</b> (see bottom left of the designer), select <b>Parameters</b>. Right-click on it, and click on <b>Add Parameter</b>.</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_25.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>A parameter named <b>parameter1</b> is added to the <b>Parameters</b> list. Select <b>parameter1</b>, and go to the parameter <b>Properties</b> window (see bottom-right of the designer).</li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_26.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Change the <b>Name</b> to <b>customerNo</b>.</li>
+<li>Change the <b>Parameter Class</b> to <b>java.lang.Integer</b>.</li>
+<li>Check the <b>Use as a prompt</b> checkbox.</li>
+<li>Now, click on <b>Report query</b> (beside the <b>Preview</b> button), and replace the query with the following one:<ol>
+<pre>SELECT * FROM Customer<br>WHERE CustomerNo = $P{customerNo}<br></pre>
+</ol></li>
+<p style="text-align: center;"><img style="border: 0pt none;" src="./Report_files/8808_12_27.png" border="0" alt="iReport 3.7 " title="iReport 3.7 "></p>
+<li>Press <b>OK</b> and <b>Preview</b> the report. Input the <b>customerNo</b>, and see the output.</li>
+</ol>
+<h1>Summary</h1>
+<p>We have seen that creating iReport reports in NetBeans makes the process of developing and managing reports easier. We have got an initial idea of creating reports in NetBeans. In the same way, we can create the more complex reports (subreports, crosstab reports, reports with charts, and so on) as well.</p>
+<hr size="1" noshade="noshade">
+<p><b>If you have read this article you may be interested to view :</b></p>
+<ul>
+<li><a href="http://www.packtpub.com/article/building-your-first-ireport?utm_source=js_ireport3.7_abr2_0310&amp;utm_medium=content&amp;utm_campaign=janice" target="_blank">Building Your First iReport</a></li>
+</ul>                                            </div>
+					<div class="book-to-consider article cf">
+						<div class="book-to-consider-inner inner article">
+							<div class="book-to-consider-text">
+								<h3>Books to Consider</h3>
+							</div>
+							<div class="cf"></div>
+	                        							
+														<div class="book-to-consider-books article">
+								<div class="book-to-consider-books-inner">
+																																																													 	<div class="book-block-outer">
+													
+		
+	<div class="book-block-outer " itemscope="" itemtype="http://schema.org/Product" data-product="true" data-product-id="4341" data-product-position="1" data-product-price="221.7" data-product-title="iReport 3.7" data-product-type="books" data-product-brand="Packt Publishing" data-product-category="Big Data &amp; Business Intelligence">
+		<div class="book-block">
+			<div class="book-block-icon-books">
+			</div>
+							<noscript>
+					&lt;img src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/featured_book_block/8808_MockupCover.jpg" class="bookimage "  /&gt;
+				</noscript>
+				<img src="./Report_files/8808_MockupCover(1).jpg" data-original="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/featured_book_block/8808_MockupCover.jpg" class="bookimage " style="opacity: 1;">
+						<div class="book-block-title" itemprop="name">
+				iReport 3.7			</div>
+			<div class="book-block-price " itemprop="offers" itemtype="http://schema.org/Offer" itemscope="">
+				<meta itemprop="price" content="221.7">
+				<meta itemprop="price" content="">
+				₨ 221.70			</div>
+			<div class="book-block-overlay">
+				<a href="https://www.packtpub.com/big-data-and-business-intelligence/ireport-37">
+					<div class="book-block-one-liner ellipsis" itemprop="description">
+						<div>Learn how to use iReport to create, design, format, and export reports</div>
+					</div>
+					<div class="book-block-star-rating" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+						<meta itemprop="ratingCount" content="0">
+						<meta itemprop="ratingValue" content="">
+											</div>
+				</a>
+				<div class="book-block-buttons ">
+					<button type="button" class="book-block-collection not-in-collection" nid="4341" title="iReport 3.7">+ Collection</button>
+											<button type="submit" nid="4341" action="/add_to_cart/4711" class="book-block-buy  ">₨221.70</button>
+									</div>
+			</div>
+		</div>
+	</div>
+												</div>
+																																																						 	<div class="book-block-outer">
+													
+		
+	<div class="book-block-outer  book-block-position-2" itemscope="" itemtype="http://schema.org/Product" data-product="true" data-product-id="17629" data-product-position="2" data-product-price="555.9" data-product-title="NetBeans IDE 8 Cookbook" data-product-type="books" data-product-brand="Packt Publishing" data-product-category="">
+		<div class="book-block">
+			<div class="book-block-icon-books">
+			</div>
+							<noscript>
+					&lt;img src="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/featured_book_block/7761OS_NetBeans IDE Cookbook (2nd Edition)_cover.jpg" class="bookimage "  /&gt;
+				</noscript>
+				<img src="./Report_files/7761OS_NetBeans IDE Cookbook (2nd Edition)_cover.jpg" data-original="//d1ldz4te4covpm.cloudfront.net/sites/default/files/imagecache/featured_book_block/7761OS_NetBeans IDE Cookbook (2nd Edition)_cover.jpg" class="bookimage " style="opacity: 1;">
+						<div class="book-block-title" itemprop="name">
+				NetBeans IDE 8 Cookbook			</div>
+			<div class="book-block-price " itemprop="offers" itemtype="http://schema.org/Offer" itemscope="">
+				<meta itemprop="price" content="555.9">
+				<meta itemprop="price" content="">
+				₨ 555.90			</div>
+			<div class="book-block-overlay">
+				<a href="https://www.packtpub.com/application-development/netbeans-ide-8-cookbook">
+					<div class="book-block-one-liner ellipsis" itemprop="description">
+						<div>Over 75 practical recipes to maximize your productivity with NetBeans</div>
+					</div>
+					<div class="book-block-star-rating" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+						<meta itemprop="ratingCount" content="0">
+						<meta itemprop="ratingValue" content="">
+											</div>
+				</a>
+				<div class="book-block-buttons ">
+					<button type="button" class="book-block-collection not-in-collection" nid="17629" title="NetBeans IDE 8 Cookbook">+ Collection</button>
+											<button type="submit" nid="17629" action="/add_to_cart/17628" class="book-block-buy  ">₨555.90</button>
+									</div>
+			</div>
+		</div>
+	</div>
+												</div>
+																																																						 	<div class="book-block-outer">
+													
+		
+	<div class="book-block-outer  book-block-position-3" itemscope="" itemtype="http://schema.org/Product" data-product="true" data-product-id="11634" data-product-position="3" data-product-price="138.6" data-product-title="Instant NetBeans IDE How-to" data-product-type="books" data-product-brand="Packt Publishing" data-product-category="Application Development">
+		<div class="book-block">
+			<div class="book-block-icon-books">
+			</div>
+							<noscript>
+					&lt;img src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/featured_book_block/3442OScov.jpg" class="bookimage "  /&gt;
+				</noscript>
+				<img src="./Report_files/3442OScov.jpg" data-original="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/featured_book_block/3442OScov.jpg" class="bookimage " style="opacity: 1;">
+						<div class="book-block-title" itemprop="name">
+				Instant NetBeans IDE How-to			</div>
+			<div class="book-block-price " itemprop="offers" itemtype="http://schema.org/Offer" itemscope="">
+				<meta itemprop="price" content="138.6">
+				<meta itemprop="price" content="">
+				₨ 138.60			</div>
+			<div class="book-block-overlay">
+				<a href="https://www.packtpub.com/application-development/instant-netbeans-ide-how-instant">
+					<div class="book-block-one-liner ellipsis" itemprop="description">
+						<div>Develop different Java applications such as desktop, web, enterprise, and mobile applications using NetBeans IDE</div>
+					</div>
+					<div class="book-block-star-rating" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+						<meta itemprop="ratingCount" content="0">
+						<meta itemprop="ratingValue" content="">
+											</div>
+				</a>
+				<div class="book-block-buttons ">
+					<button type="button" class="book-block-collection not-in-collection" nid="11634" title="Instant NetBeans IDE How-to">+ Collection</button>
+											<button type="submit" nid="11634" action="/add_to_cart/11633" class="book-block-buy  ">₨138.60</button>
+									</div>
+			</div>
+		</div>
+	</div>
+												</div>
+																																																						 	<div class="end-of-shelf book-block-outer">
+												 	
+		
+	<div class="book-block-outer  book-block-position-2 book-block-position-4" itemscope="" itemtype="http://schema.org/Product" data-product="true" data-product-id="7334" data-product-position="4" data-product-price="277.2" data-product-title="Java EE 6 Development with NetBeans 7" data-product-type="books" data-product-brand="Packt Publishing" data-product-category="">
+		<div class="book-block last">
+			<div class="book-block-icon-books">
+			</div>
+							<noscript>
+					&lt;img src="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/featured_book_block/2701_Java EE6 .jpg" class="bookimage "  /&gt;
+				</noscript>
+				<img src="./Report_files/2701_Java EE6 .jpg" data-original="//dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/featured_book_block/2701_Java EE6 .jpg" class="bookimage " style="opacity: 1;">
+						<div class="book-block-title" itemprop="name">
+				Java EE 6 Development with NetBeans 7			</div>
+			<div class="book-block-price " itemprop="offers" itemtype="http://schema.org/Offer" itemscope="">
+				<meta itemprop="price" content="277.2">
+				<meta itemprop="price" content="">
+				₨ 277.20			</div>
+			<div class="book-block-overlay">
+				<a href="https://www.packtpub.com/application-development/java-ee-6-development-netbeans-7">
+					<div class="book-block-one-liner ellipsis" itemprop="description">
+						<div>Developing Java EE applications is faster and far less demanding when you can use NetBeans. The guide quickly familiarizes you with this popular Integrated Development Environment (IDE) through practical instruction.</div>
+					</div>
+					<div class="book-block-star-rating" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope="">
+						<meta itemprop="ratingCount" content="0">
+						<meta itemprop="ratingValue" content="">
+											</div>
+				</a>
+				<div class="book-block-buttons ">
+					<button type="button" class="book-block-collection not-in-collection" nid="7334" title="Java EE 6 Development with NetBeans 7">+ Collection</button>
+											<button type="submit" nid="7334" action="/add_to_cart/7333" class="book-block-buy  ">₨277.20</button>
+									</div>
+			</div>
+		</div>
+	</div>
+												</div>
+																																						</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-buttons cf">
+						<a href="https://www.packtpub.com/books/content/article-network">
+							<div class="back-button">Back to Articles</div>
+						</a>
+						<div class="back-to-top">
+							<a href="https://www.packtpub.com/books/content/ireport-netbeans#">Back to the top</a>
+						</div>
+					</div>
+				</div>
+				<div id="disqus_thread"><iframe id="dsq-app2" name="dsq-app2" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Report_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 610px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'packtpub'; // required: replace example with your forum shortname
+    var disqus_identifier = window.location.hash;
+  	var disqus_url = window.location.href;
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+		 	</div>
+		</div>   
+	</div>
+</div>
+
+
+<input type="hidden" name="freebook_category" value="282">
+<div id="freebook-popup" style="display: none;">
+	<div id="freebook-popup-inner">
+		<div id="freebook-popup-close" class="cf"><div id="freebook-popup-close-icon"></div></div>
+		<a href="https://www.packtpub.com/packt/free-ebook/thinking-in-javascript">
+			<div id="freebook-popup-image">
+				<img src="./Report_files/Thinking in JavaScript.jpg">
+			</div>
+			<div id="freebook-popup-data">
+				<h3>Download Your Free eBook</h3>
+				<h4>Thinking in JavaScript</h4>
+				<p>Get started with JavaScript with this free eBook and learn one of the most important languages in web development today. With helpful tips and code examples, discover how you can create websites with impressive and dynamic functionality. </p>
+				
+				<button id="freebook-popup-book-link">Claim Your Free Download</button>
+			</div>
+			</a>
+	</div>
+</div>
+<div id="freebook-popup-overlay" style="display: none;"></div>
+
+<style>
+
+#freebook-popup-overlay  {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 997;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	display: none;
+}
+
+#freebook-popup-inner {
+	background:white;
+	width:700px;
+	height: 440px;
+	margin:auto;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+#freebook-popup-inner a {
+	color: #494949;
+}
+
+#freebook-popup-border{
+	border:1px solid black;
+	height: 100%;
+}
+
+#freebook-popup-image {
+	width: 305px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+#freebook-popup-image img {
+	width: 100%
+}
+
+#freebook-popup-data {
+	width:320px;
+	float: right;
+	margin-right: 20px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#freebook-popup-data p {
+	font-size:1em;
+}
+#freebook-popup-data h3 {
+	font-size: 3em;
+	font-weight: 500;
+	margin-bottom: 15px;
+	line-height: 40px;
+	padding-top: 20px;
+}
+
+#freebook-popup-data h4 {
+	font-size: 2.2em;
+	font-style: italic;
+	font-weight: 100;
+}
+
+#freebook-popup {
+	width: 100%;
+	z-index: 998;
+	position: fixed;
+	top: 20%;
+	left: 0;
+	display: none;
+	text-align: center;
+}
+#freebook-popup-close {
+	color: black;
+	font-size: 1.5em;
+	margin-right: 8px;
+	cursor: pointer;
+	float: right;
+	padding-top: 10px;
+}
+
+#freebook-popup-data button {
+	width: 100%;
+	display: block;
+	height: 40px;
+	text-align: center;
+	border:0px;
+	font-size: 1.2em;
+	margin-top: 30px;
+}
+#freebook-popup-close-icon {
+	background: url(/sites/all/themes/packt_v4/images/sprite-fixed.png) no-repeat;
+	background-position: -3109px 0px;
+	width: 22px;
+	height: 21px;
+}
+</style>
+
+
+
+					 							 			</div>
+					 								</div>
+						<!-- /#content -->
+								
+									</div>
+			</div>
+									
+						
+			<!-- #footer -->
+			<div id="footer" class="region region-footer">
+				<div class="section-inner cf">
+					<div class="footer-main-block">
+						<div class="footer-section-inner">
+														<h2>Contact Us</h2>
+							<p>Get in touch&nbsp;<a href="https://www.packtpub.com/books/info/packt/contact-us">here</a>&nbsp;<span style="font-family: Calibri, sans-serif; font-size: 11pt; line-height: 115%;">if you have any queries or issues.</span></p>						</div>
+					</div>
+					<div class="footer-main-block middle-footer-block">
+						<div class="footer-section-inner">
+														<h2>Help &amp; Support</h2>
+							<p class="MsoNormal">Click&nbsp;<a href="https://www.packtpub.com/books/info/packt/faq">here</a>&nbsp;for FAQs, order information, T&amp;Cs, errata and code downloads.</p>						</div>
+					</div>
+					<div class="footer-main-block">
+						<div class="footer-section-inner">
+														<h2>Alerts &amp; Offers</h2>
+							<p class="MsoNormal">Sign up to our emails for regular updates, bespoke offers, exclusive discounts and great free content.</p>							<form accept-charset="UTF-8" method="post" id="packt-v3-subscribtion-dotd-form-1">
+<div><div class="form-item">
+ 
+</div>
+<div class="form-item" id="edit-mail-1-wrapper">
+ <input type="text" maxlength="128" name="mail" id="edit-mail-1" size="60" value="" placeholder="Enter your email address" class="form-text">
+</div>
+<input type="hidden" name="newsletter_id" id="edit-newsletter-id-1" value="">
+<input type="submit" name="op" id="edit-submit-4" value="Submit" class=" form-submit">
+<input type="hidden" name="form_build_id" id="form-c57c53941a6bd9237246bba6ddd0227b" value="form-c57c53941a6bd9237246bba6ddd0227b">
+<input type="hidden" name="form_id" id="edit-packt-v3-subscribtion-dotd-form-1" value="packt_v3_subscribtion_dotd_form">
+
+</div></form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /#footer -->
+
+			<!-- #footer-bottom -->
+			<div id="footer-bottom" class="region region-footer-bottom">
+				<div class="section-inner cf">
+					<div class="footer-bottom-block">
+						<div class="footer-bottom-block-left">
+							© Packt Publishing Limited.
+							<br>
+							All Rights Reserved
+						</div>
+					</div>
+					<div class="footer-bottom-block footer-contact-us">
+						<a href="https://www.packtpub.com/books/info/packt/contact-us">Contact Us</a>
+					</div>
+					<div class="footer-bottom-block">
+						View our <a href="https://www.packtpub.com/books/info/packt/cookies">Cookie Policy</a>
+					</div>
+					<div class="footer-bottom-block">
+						Our <a href="https://www.packtpub.com/books/info/packt/privacy">Privacy Policy</a>
+					</div>
+					<div class="footer-bottom-block">
+						<a target="_blank" href="http://www.linkedin.com/company/packt-publishing" class="footer-social linkedin"></a>
+						<a target="_blank" href="http://twitter.com/packtpub" class="footer-social twitter"></a>
+						<a target="_blank" href="http://www.facebook.com/packtpub" class="footer-social facebook"></a>
+						<a target="_blank" href="https://plus.google.com/112328881995125817822" class="footer-social gplus"></a>
+						<a target="_blank" href="https://www.youtube.com/user/packt1000" class="footer-social youtube"></a>
+					</div>
+				<div class="footer-bottom-block" respo="">
+						<div class="footer-bottom-block-left">
+							© Packt Publishing Limited.
+							<br>
+							All Rights Reserved
+						</div>
+					</div></div>
+			</div>
+			<!-- /#footer-bottom -->
+			<script>
+			(function (w,i,d,g,e,t,s)
+			{w[d] = w[d]||[];t= i.createElement(g); t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s); }
+			)(window, document, '_gscq','script','//widgets.getsitecontrol.com/18511/script.js');
+			</script>
+			
+						
+						
+		</div><div class="clickDiv"></div></div><div class="loading-spinner-container"><div class="loading-spinner"></div></div><script type="text/javascript" id="">document.cookie="__logged_in\x3d0";</script><script type="text/javascript" id="">(function(c,a,d){var e=d.prototype.open,f=d.prototype.send,b;c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};c._hjSettings={hjid:2591,hjsv:1};a.addEventListener&&a.addEventListener("DOMContentLoaded",function(){c.hj.documentHtml=a.documentElement.outerHTML;b=a.createElement("script");b.async=1;b.src="//static.hotjar.com/c/hotjar-2591.js?sv\x3d1";a.getElementsByTagName("head")[0].appendChild(b)});!c._hjPlayback&&a.addEventListener&&(d.prototype.open=function(c,a,g,d,b){this._u=a;e.call(this,
+c,a,g,d,b)},d.prototype.send=function(a){function d(){4===b.readyState&&c.hj("_xhr",b._u,b.status,b.response)}var b=this;this.addEventListener("readystatechange",d,!1);f.call(this,a)})})(window,document,window.XMLHttpRequest);</script>
+<script type="text/javascript" id="">var _vwo_code=function(){var e=121323,f=2E3,g=2500,h=!0,d=!1,c=document;return{use_existing_jquery:function(){return h},library_tolerance:function(){return g},finish:function(){if(!d){d=!0;var a=c.getElementById("_vis_opt_path_hides");a&&a.parentNode.removeChild(a)}},finished:function(){return d},load:function(a){var b=c.createElement("script");b.src=a;b.type="text/javascript";b.innerText;b.onerror=function(){_vwo_code.finish()};c.getElementsByTagName("head")[0].appendChild(b)},init:function(){settings_timer=
+setTimeout("_vwo_code.finish()",f);this.load("//dev.visualwebsiteoptimizer.com/j.php?a\x3d"+e+"\x26u\x3d"+encodeURIComponent(c.URL)+"\x26r\x3d"+Math.random());var a=c.createElement("style"),b="body{opacity:0 !important;filter:alpha(opacity\x3d0) !important;background:none !important;}",d=c.getElementsByTagName("head")[0];a.setAttribute("id","_vis_opt_path_hides");a.setAttribute("type","text/css");a.styleSheet?a.styleSheet.cssText=b:a.appendChild(c.createTextNode(b));d.appendChild(a);return settings_timer}}}();
+_vwo_settings_timer=_vwo_code.init();</script>
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+<noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=445429252334850&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
+<script type="text/javascript" id="">var event_manager={wheight:0,wwidth:0,targetpx:0,bottomtarget:0,disquspx:0,not_sent:!0,reached_end:!1,started_scroll:!1,reached_disqus:!1,init:function(){var a=$(document),b=$(window);event_manager.wheight=b.height();event_manager.wwidth=b.width();a.ready(function(){var a=$(".article-content"),c=$("#disqus_thread");0<a.length&&(event_manager.targetpx=a.offset().top+150,event_manager.bottomtarget=a.offset().top+a.height(),event_manager.disquspx=c.offset().top,b.scroll(function(){clearTimeout($.data(this,
+"scrollTimer"));$.data(this,"scrollTimer",setTimeout(function(){event_manager.isInView(b)&&event_manager.not_sent&&(event_manager.not_sent=!1,dataLayer.push({event:"ScrollDistance",eventCategory:"Article View",eventAction:$("#title-bar-title h1").text(),eventLabel:"Reached Content",eventValue:Packt.user.uid,eventNonInteraction:!0}));event_manager.atEnd(b)&&!event_manager.reached_end&&(event_manager.reached_end=!0,dataLayer.push({event:"ScrollDistance",eventCategory:"Article View",eventAction:$("#title-bar-title h1").text(),
+eventLabel:"Reached End of Content",eventValue:Packt.user.uid,eventNonInteraction:!0}));event_manager.atComment(b)&&!event_manager.reached_disqus&&(event_manager.reached_disqus=!0,dataLayer.push({event:"ScrollDistance",eventCategory:"Article View",eventAction:$("#title-bar-title h1").text(),eventLabel:"Reached End Of Page",eventValue:Packt.user.uid,eventNonInteraction:!0}))},250))}),b.scroll(function(){event_manager.started_scroll||(event_manager.started_scroll=!0,dataLayer.push({event:"ScrollDistance",
+eventCategory:"Article View",eventAction:$("#title-bar-title h1").text(),eventLabel:"Begin Scroll",eventValue:Packt.user.uid,eventNonInteraction:!0}))}))})},isInView:function(a){a=a.scrollTop()+a.height();return a>event_manager.targetpx?!0:!1},atEnd:function(a){a=a.scrollTop()+a.height();return a>event_manager.bottomtarget?!0:!1},atComment:function(a){a=a.scrollTop()+a.height();return a>event_manager.disquspx?!0:!1}};event_manager.init();</script><w-div id="g-v9owso" class="g-37562e g-ucbpvj gjxowq9 grbtnns gee66bq"><style media="print" type="text/css">#g-v9owso{display:none!important}</style><style media="handheld,screen,projection,tv" type="text/css">#g-v9owso{margin:0;padding:0;border:0;box-sizing:content-box!important;box-shadow:none;background-clip:padding-box!important;line-height:1.2;vertical-align:middle;text-align:left;font-weight:400;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-style:normal;letter-spacing:normal;text-shadow:none;text-transform:none;float:none;z-index:2147483635;-webkit-font-smoothing:subpixel-antialiased;-webkit-tap-highlight-color:rgba(0,0,0,0);filter:none}#g-v9owso a,#g-v9owso b,#g-v9owso div,#g-v9owso em,#g-v9owso form,#g-v9owso h1,#g-v9owso i,#g-v9owso img,#g-v9owso label,#g-v9owso li,#g-v9owso ol,#g-v9owso p,#g-v9owso span,#g-v9owso strong,#g-v9owso u,#g-v9owso ul{margin:0;padding:0;border:0;border-radius:0;vertical-align:inherit;width:auto;height:auto;min-width:0;min-height:0;max-width:none;max-height:none;text-shadow:none!important;box-shadow:none!important;font-family:inherit;line-height:inherit;letter-spacing:normal;color:inherit;background-color:transparent;position:static;font-size:inherit;font-weight:inherit;font-style:inherit;text-transform:inherit;text-decoration:inherit;text-align:inherit;float:none;outline:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}#g-v9owso a,#g-v9owso a:active,#g-v9owso a:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none}#g-v9owso img{display:block}#g-v9owso .gm8nmmd{vertical-align:baseline;line-height:1.35}#g-v9owso .gm8nmmd b,#g-v9owso .gm8nmmd strong{font-weight:700}#g-v9owso .gm8nmmd em,#g-v9owso .gm8nmmd i{font-style:italic}#g-v9owso .gm8nmmd u{text-decoration:underline}#g-v9owso .gm8nmmd p{margin:0 0 10px 0}#g-v9owso .gm8nmmd a{text-decoration:underline}#g-v9owso .gm8nmmd.gcb0ii9{display:inline;white-space:nowrap;margin:0;padding:0}#g-v9owso .gm8nmmd.gcb0ii9 *{white-space:nowrap;display:inline;margin:0;padding:0}#g-v9owso ::-webkit-input-placeholder{color:#cacaca!important;text-overflow:ellipsis!important;opacity:1;overflow:hidden;white-space:nowrap;vertical-align:middle;font-size:14px;text-align:left;font-weight:400;position:static}#g-v9owso :-moz-placeholder,#g-v9owso ::-moz-placeholder{color:#cacaca!important;text-overflow:ellipsis!important;opacity:1;overflow:hidden;white-space:nowrap;vertical-align:middle;font-size:14px;text-align:left;font-weight:400;position:static}#g-v9owso input:-ms-input-placeholder{color:#cacaca!important;text-overflow:ellipsis!important;opacity:1;overflow:hidden;white-space:nowrap;vertical-align:middle;font-size:14px;text-align:left;font-weight:400;position:static}#g-v9owso [placeholder]{text-overflow:ellipsis}#g-v9owso input:-moz-placeholder,#g-v9owso input:-ms-input-placeholder,#g-v9owso input::-moz-placeholder{text-overflow:ellipsis}#g-v9owso input,#g-v9owso input:focus,#g-v9owso select,#g-v9owso select:focus,#g-v9owso textarea,#g-v9owso textarea:focus{margin:0!important;padding:0;border:0;text-align:left!important;border-radius:3px!important;background:0 0;vertical-align:middle;width:auto!important;height:auto!important;min-width:0;min-height:0;max-width:none;max-height:none;text-shadow:none!important;box-shadow:none!important;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif!important;background-clip:padding-box!important;line-height:1!important;letter-spacing:normal!important;outline:0 none!important;font-size:14px!important;float:none}#g-v9owso button,#g-v9owso input[type=submit]{margin:0;padding:0;background:0 0;width:auto;height:auto;text-shadow:none!important;box-shadow:none!important;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;line-height:1;letter-spacing:normal;float:none;font-weight:700;text-decoration:none;display:inline-block;text-align:center;border-radius:2px;vertical-align:middle;cursor:pointer;background-image:none;border:0;white-space:nowrap;outline:0;font-family:inherit;text-transform:none;overflow:visible}#g-v9owso button:active,#g-v9owso button:disabled,#g-v9owso button:focus,#g-v9owso button:hover,#g-v9owso input[type=submit]:active,#g-v9owso input[type=submit]:disabled,#g-v9owso input[type=submit]:focus,#g-v9owso input[type=submit]:hover{outline:0;text-decoration:none}#g-v9owso button::-moz-focus-inner,#g-v9owso input[type=submit]::-moz-focus-inner{padding:0;border:0}#g-v9owso textarea{line-height:1.2;overflow:auto;resize:none!important}#g-v9owso input:-webkit-autofill,#g-v9owso textarea:-webkit-autofill{background-color:transparent!important;-webkit-box-shadow:0 0 0 1000px #fff inset!important}#g-v9owso *{box-sizing:content-box!important;-webkit-filter:none;filter:none}#g-v9owso .gfs5d1h,#g-v9owso .gfs5d1h:focus{border:solid 1px #efbc4f!important;background-color:#ffffff!important;font-size:14px!important;padding-left:8px!important;padding-right:8px!important;color:#333333!important;box-sizing:border-box!important;height:32px!important;width:100%!important;padding-top:8px \9;padding-bottom:8px \9}#g-v9owso .gfs5d1h::-moz-placeholder,#g-v9owso .gfs5d1h:focus::-moz-placeholder{font-size:14px;line-height:32px;height:32px}#g-v9owso .gfs5d1h::-webkit-input-placeholder,#g-v9owso .gfs5d1h:focus::-webkit-input-placeholder{font-size:14px;line-height:17px}#g-v9owso .g-2r57bw{display:none}#g-v9owso .g-uvb152{color:#ffffff!important;background:#ac8023!important;-webkit-transition:background-color .2s ease-out!important;transition:background-color .2s ease-out!important;margin-top:1px;font-size:0;vertical-align:middle;line-height:1}#g-v9owso .g-uvb152:active,#g-v9owso .g-uvb152:hover{background:#b48d39!important;color:#ffffff!important}#g-v9owso .g-8livwq{font-family:gsc!important;font-style:normal!important;font-weight:400!important;line-height:1;vertical-align:middle;display:inline-block;background-color:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:22px;line-height:30px;padding:0 6px;display:none}#g-v9owso .g-8livwq:before{color:inherit!important;font-family:gsc!important;font-style:inherit!important;font-weight:inherit!important;vertical-align:baseline!important;background-color:inherit!important}#g-v9owso .g-8livwq:before{content:"\e80a"}#g-v9owso .g3y33bm .g-8livwq{display:inline-block}#g-v9owso .g7ocsx9{padding:0 20px;font-size:14px;font-weight:700;vertical-align:middle;max-width:250px;line-height:30px;word-wrap:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block}#g-v9owso .g3y33bm .g7ocsx9{display:none}#g-v9owso .gqvwtn3{width:100%;display:table;margin:0 auto}#g-v9owso .g-9dbxl2{display:table;width:100%}#g-v9owso .g-5sdgax{width:100%;display:table-cell;padding-right:5px}#g-v9owso .g-gcaykt .g-5sdgax{width:50%}#g-v9owso .g-gcaykt .g7ocsx9{line-height:32px}#g-v9owso .g-uvb152{display:table-cell}#g-v9owso.gwlmc95 .g-gcaykt .g-9dbxl2{table-layout:fixed}#g-v9owso.gwlmc95 .g-gcaykt .g-5sdgax{width:100%;display:block;margin-bottom:5px}#g-v9owso.gwlmc95 .g-gcaykt .g-5sdgax:last-child{margin-bottom:0}#g-v9owso.gwlmc95 .g-gcaykt .g-5sdgax{padding-right:0}#g-v9owso.gwlmc95 .g-gcaykt .g-uvb152{margin-top:5px;display:block;width:100%}#g-v9owso.gwlmc95 .g-gcaykt .g7ocsx9{max-width:none;display:block}#g-v9owso.g-36mtfs .g-9dbxl2{table-layout:fixed}#g-v9owso.g-36mtfs .g7ocsx9{display:block}#g-v9owso .g51otj7{display:none;text-align:left;z-index:2147483636;background-clip:padding-box}#g-v9owso .gbkveol{font-family:gsc!important;font-style:normal!important;font-weight:400!important;line-height:1;vertical-align:middle;display:inline-block;background-color:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-animation:gscw-flipTy 600ms;animation:gscw-flipTy 600ms;-webkit-backface-visibility:visible!important;backface-visibility:visible!important;text-align:center;font-size:120px;display:block}#g-v9owso .gbkveol:before{color:inherit!important;font-family:gsc!important;font-style:inherit!important;font-weight:inherit!important;vertical-align:baseline!important;background-color:inherit!important}#g-v9owso .gbkveol:before{content:"\e80b"}.gsykjs2#g-v9owso .g-x487e3{display:none}.gsykjs2#g-v9owso .g51otj7{height:160px;-webkit-animation:gscw-fadeIn 600ms;animation:gscw-fadeIn 600ms;display:table;width:100%;table-layout:fixed}.g3uwey9.gsykjs2#g-v9owso .g51otj7{-webkit-animation:none!important;animation:none!important}.gsykjs2#g-v9owso .g51otj7>.gytx7j2{display:table-cell;vertical-align:middle}.gprtxxp#g-v9owso .g51otj7{opacity:1}#g-v9owso .g51otj7{display:block;position:absolute;top:0;left:0;bottom:0;right:0;text-align:center;z-index:2147483636;visibility:hidden;overflow:hidden;line-height:42px;color:#74520b;background:#feca5c;-webkit-transform-origin:bottom;-ms-transform-origin:bottom;transform-origin:bottom;-webkit-transform:rotateX(-90deg);transform:rotateX(-90deg);-webkit-backface-visibility:visible;backface-visibility:visible;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transition:-webkit-transform 500ms,visibility 500ms;transition:transform 500ms,visibility 500ms}#g-v9owso.gq8l9ue .g51otj7{-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top}#g-v9owso .gmzl22p{font-family:gsc!important;font-style:normal!important;font-weight:400!important;line-height:1;display:inline-block;background-color:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;vertical-align:middle;font-size:22px;line-height:42px}#g-v9owso .gmzl22p:before{color:inherit!important;font-family:gsc!important;font-style:inherit!important;font-weight:inherit!important;vertical-align:baseline!important;background-color:inherit!important}#g-v9owso .gmzl22p:before{content:"\e820"}#g-v9owso .gzh9ng6{margin-left:10px;font-size:14px;line-height:42px;display:inline-block;-webkit-user-select:text!important;-moz-user-select:text!important;-ms-user-select:text!important;user-select:text!important;word-wrap:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80%}#g-v9owso .g-x47dm1{text-decoration:none;display:inline-block;text-align:center;border-radius:2px;vertical-align:middle;cursor:pointer;background-image:none;border:0;outline:0;font-family:inherit;text-transform:none;overflow:visible;color:#ffffff!important;background:#ac8023!important;-webkit-transition:background-color .2s ease-out!important;transition:background-color .2s ease-out!important;margin-left:16px;padding:0 20px;line-height:32px;font-size:14px;font-weight:700;max-width:317px;word-wrap:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#g-v9owso .g-x47dm1:active,#g-v9owso .g-x47dm1:disabled,#g-v9owso .g-x47dm1:focus,#g-v9owso .g-x47dm1:hover{outline:0;text-decoration:none}#g-v9owso .g-x47dm1::-moz-focus-inner{padding:0;border:0}#g-v9owso .g-x47dm1:active,#g-v9owso .g-x47dm1:hover{background:#b48d39!important;color:#ffffff!important}#g-v9owso.gsykjs2 .g51otj7{visibility:visible;-webkit-transform:rotateX(0);transform:rotateX(0)}#g-v9owso.gprtxxp .g51otj7{visibility:hidden;-webkit-transform:rotateX(-90deg);transform:rotateX(-90deg)}#g-v9owso .gqvwtn3{width:auto;min-width:540px}#g-v9owso .g-gcaykt .g7ocsx9{line-height:30px}#g-v9owso .gqvwtn3 .g-uvb152{color:#ffffff!important;background:#ac8023!important;-webkit-transition:background-color .2s ease-out!important;transition:background-color .2s ease-out!important}#g-v9owso .gqvwtn3 .g-uvb152:active,#g-v9owso .gqvwtn3 .g-uvb152:hover{background:#b48d39!important;color:#ffffff!important}#g-v9owso .gqvwtn3 .g-bkq1v2{min-width:250px!important}#g-v9owso .gqvwtn3 .gs6sa8n{padding-right:16px;font-size:14px;display:table-cell;line-height:32px;width:1px}#g-v9owso{color:#74520b!important;background:#feca5c!important;display:block;white-space:nowrap!important;overflow:hidden;padding:5px 42px!important;text-align:center!important;left:0;right:0;position:fixed;font-size:0}#g-v9owso a,#g-v9owso a:active,#g-v9owso a:focus,#g-v9owso a:hover,#g-v9owso button,#g-v9owso button:active,#g-v9owso button:focus,#g-v9owso button:hover,#g-v9owso div,#g-v9owso input,#g-v9owso input:active,#g-v9owso input:focus,#g-v9owso label,#g-v9owso span,#g-v9owso textarea,#g-v9owso textarea:active,#g-v9owso textarea:focus{color:inherit}#g-v9owso.gq8l9ue{-webkit-transition:top 500ms cubic-bezier(.455,.03,.515,.955);transition:top 500ms cubic-bezier(.455,.03,.515,.955);top:-42px}.g3uwey9#g-v9owso.gq8l9ue{-webkit-transition:none!important;transition:none!important}#g-v9owso.gq8l9ue.gee66bq{top:0}#g-v9owso.grbtnns{-webkit-transition:bottom 500ms cubic-bezier(.455,.03,.515,.955);transition:bottom 500ms cubic-bezier(.455,.03,.515,.955);bottom:-42px}.g3uwey9#g-v9owso.grbtnns{-webkit-transition:none!important;transition:none!important}#g-v9owso.grbtnns.gee66bq{bottom:0}#g-v9owso.g-g32qz5{position:absolute}#g-v9owso.g-x00lm9{position:fixed!important}#g-v9owso .gcb2dkb{font-family:gsc!important;font-style:normal!important;font-weight:400!important;line-height:1;vertical-align:middle;display:inline-block;background-color:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:22px;height:22px;width:22px;color:#74520b!important;text-indent:0!important;top:0!important;left:0!important;padding:10px;background:0 0!important;z-index:-1;position:absolute;display:block!important;text-decoration:none!important;-webkit-transition:opacity 200ms cubic-bezier(.455,.03,.515,.955);transition:opacity 200ms cubic-bezier(.455,.03,.515,.955);opacity:.5!important}#g-v9owso .gcb2dkb:before{color:inherit!important;font-family:gsc!important;font-style:inherit!important;font-weight:inherit!important;vertical-align:baseline!important;background-color:inherit!important}#g-v9owso .gcb2dkb:before{content:"\e809"}.g3uwey9#g-v9owso .gcb2dkb{-webkit-transition:none!important;transition:none!important}#g-v9owso .gcb2dkb:hover{opacity:1!important}#g-v9owso .gcb2dkb:active,#g-v9owso .gcb2dkb:focus,#g-v9owso .gcb2dkb:hover{outline:0;text-decoration:none}#g-v9owso .g-by98zu{color:#74520b!important;font-family:gsc!important;font-style:normal!important;font-weight:400!important;line-height:1;vertical-align:middle;display:inline-block;background-color:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:22px;height:22px;width:22px;-webkit-transition:-webkit-transform 200ms,opacity 200ms!important;transition:transform 200ms,opacity 200ms!important;opacity:.5;cursor:pointer;position:absolute;z-index:2147483637;padding:10px;right:0;top:0}#g-v9owso .g-by98zu:before{color:inherit!important;font-family:gsc!important;font-style:inherit!important;font-weight:inherit!important;vertical-align:baseline!important;background-color:inherit!important}#g-v9owso .g-by98zu:before{content:"\e81c"}#g-v9owso .g-by98zu:hover{opacity:1;-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}#g-v9owso .gtbssr9{font-size:14px;line-height:32px;display:inline-block;word-wrap:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%;max-width:calc(100% - 357px);margin-right:16px}#g-v9owso .gy6vesm{text-decoration:none;display:inline-block;text-align:center;border-radius:2px;vertical-align:middle;cursor:pointer;background-image:none;border:0;outline:0;font-family:inherit;text-transform:none;overflow:visible;color:#ffffff!important;background:#ac8023!important;-webkit-transition:background-color .2s ease-out!important;transition:background-color .2s ease-out!important;line-height:32px;font-size:14px;font-weight:700;max-width:317px;word-wrap:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}#g-v9owso .gy6vesm:active,#g-v9owso .gy6vesm:disabled,#g-v9owso .gy6vesm:focus,#g-v9owso .gy6vesm:hover{outline:0;text-decoration:none}#g-v9owso .gy6vesm::-moz-focus-inner{padding:0;border:0}#g-v9owso .gy6vesm:active,#g-v9owso .gy6vesm:hover{background:#b48d39!important;color:#ffffff!important}</style><div class="g51otj7">  <span class="gzh9ng6 "> <nobr class="gm8nmmd gcb0ii9">  You have successfully subscribed to Packt. We respect your privacy so you unsubscribe at any point.  </nobr> </span></div><form class="gqvwtn3  gwz1ab" novalidate="novalidate">  <label for="subscribe53472email" class="gs6sa8n "> Get great offers to your inbox from Packt </label>  <div class="g-9dbxl2"><w-div class="g-5sdgax"><label for="gscw_email_input" class="g-2r57bw">Email</label><w-div class="g-bkq1v2 g4ts0h1"><input type="email" maxlength="1000" title="Email" placeholder="Email address" name="email" id="gscw_email_input" class="gfs5d1h g-18k9hi"></w-div></w-div> <button type="submit" class="g-uvb152 "> <span class="g7ocsx9">Subscribe</span> <span class="g-8livwq" title="Subscribe"></span></button></div></form><span class="g-by98zu"></span></w-div></body></html>
